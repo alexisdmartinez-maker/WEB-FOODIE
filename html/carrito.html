@@ -3,9 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FOODIE-Carrito</title>
+    <link rel="stylesheet" href="CSS/diseño.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    
 </head>
 <body>
+    <header class="navbar">
+        <div class="logo">
+            <i class="fi fi-sr-spoon"></i>FOODIE<i class="fi fi-sr-fork"></i>
+        </div>
+        <nav class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="../index.html#categorias">Menu</a>
+        </nav>
+        <a href="carrito.html" class="carrito-icon">
+            <i class="fi fi-sr-shopping-cart"></i>
+            <span class="carrito-contador" id="contador-carrito">0</span>
+        </a>
+    </header>
+    <section class="titulo-pedido">
+        <h1>Comfirmación de pedido</h1>
+    </section>
+    <section class="carrito-container">
+
+    <div class="resumen-pedido">
+        <h2>Resumen del pedido</h2>
+
+        <div class="item-carrito">
+            <img src="../assets/img/sushi-mix.jpg.jpg" alt="Sushi Mix">
+            <div class="item-info">
+                <p class="item-nombre">Sushi Mix</p>
+                <div class="cantidad-control">
+                    <button class="btn-restar">-</button>
+                    <span class="cantidad">1</span>
+                    <button class="btn-sumar">+</button>
+                </div>
+            </div>
+            <span class="item-subtotal">$12.00</span>
+        </div>
+
+        <div class="item-carrito">
+            <img src="../assets/img/hamburguesa-doble.jpg.jpg" alt="Hamburguesa Doble">
+            <div class="item-info">
+                <p class="item-nombre">Hamburguesa Doble</p>
+                <div class="cantidad-control">
+                    <button class="btn-restar">-</button>
+                    <span class="cantidad">1</span>
+                    <button class="btn-sumar">+</button>
+                </div>
+            </div>
+            <span class="item-subtotal">$10.00</span>
+        </div>
+
+        <div class="item-carrito">
+            <img src="../assets/img/pizza-pepperoni.jpg.jpg" alt="Pizza Pepperoni">
+            <div class="item-info">
+                <p class="item-nombre">Pizza Pepperoni</p>
+                <div class="cantidad-control">
+                    <button class="btn-restar">-</button>
+                    <span class="cantidad">1</span>
+                    <button class="btn-sumar">+</button>
+                </div>
+            </div>
+            <span class="item-subtotal">$8.00</span>
+        </div>
+
+        <div class="item-carrito">
+            <img src="../assets/img/vino-chardonnay.jpg.jpg" alt="Vino blanco de chardonnay">
+            <div class="item-info">
+                <p class="item-nombre">Vino blanco de chardonnay</p>
+                <div class="cantidad-control">
+                    <button class="btn-restar">-</button>
+                    <span class="cantidad">1</span>
+                    <button class="btn-sumar">+</button>
+                </div>
+            </div>
+            <span class="item-subtotal">$23.00</span>
+        </div>
+
+        <div class="totales">
+            <p>Total de Productos <span>4</span></p>
+            <p>Subtotal <span>$53.00</span></p>
+        </div>
+
+    </div>
+
+    <div class="direccion-entrega">
+        <h2>Dirección de entrega</h2>
+
+        <div class="mapa-contenedor">
+            <!-- mapa de entregas acordate google -->
+        </div>
+
+        <label>Dirección exacta</label>
+        <input type="text" placeholder="Calle Principal #123, Ciudad">
+
+        <label>Notas adicionales</label>
+        <textarea placeholder="Ej: tocar el timbre dos veces"></textarea>
+
+        <div class="total-pagar">
+            <h3>Total a pagar</h3>
+            <p class="monto-total">$0.00</p>
+        </div>
+
+        <button class="btn-finalizar">Finalizar pedido</button>
+        <a href="../index.html#categorias" class="btn-agregar-mas">Agregar más productos</a>
+    </div>
+
+</section>
+<footer class="footer">
+    <div class="footer-logo">
+      <i class="fi fi-sr-spoon"></i> FOODIE <i class="fi fi-sr-fork"></i>
+    </div>
+
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <div class="redes">
+        <a href="#"><i class="fi fi-brands-facebook"></i></a>
+        <a href="#"><i class="fi fi-brands-tik-tok"></i></a>
+        <a href="#"><i class="fi fi-brands-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contáctanos</h4>
+      <p><i class="fi fi-sr-call-outgoing"></i> +503 7777 8888</p>
+      <p><i class="fi fi-sr-mailbox-envelope"></i> Foodie@mejor.com</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Dirección</h4>
+      <p><i class="fi fi-sr-marker"></i> Metrocentro, San Salvador</p>
+    </div>
+
+    <p class="derechos">© 2026 Foodie, todos los derechos reservados</p>
+  </footer>
+
+
+        
+            
+    
+
     
 </body>
 </html>
