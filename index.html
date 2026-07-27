@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODIE</title>
+    <link rel="stylesheet" href="CSS/diseño.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+</head>
+<body>
+    <!--logos y links carrito de suma para javacrip-->
+    <header class="navbar">
+    <div class="logo">
+    <i class="fi fi-sr-spoon"></i>FOODIE<i class="fi fi-sr-fork"></i>
+    </div>
+    <nav class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="#categorias">Menu</a>
+    </nav>
+    <a href="html/carrito.html" class="carrito-icon">
+    <i class="fi fi-sr-shopping-cart"></i>
+    <span class="carrito-contador" id="contador-carrito">0</span>
+</a>
+    </header>
+    <section class="hero">
+    <div class="hero-texto">
+    <h1>La mejor comida <br> en un solo lugar</h1>
+    <p>Ordena fácil y rápido desde de casa</p>
+    <a href="#categorias" class="btn-ver-menu">Ver menú</a>   
+</div>
+<div class="hero-imagen">
+    <img src="assets/img/sushi-plato.jpg.jpg"alt="Plato de sushi variado">
+</div>
+    
+ </section>
+ <section class="categorias" id="categorias">
+    <a href="html/pizza.html" class="categoria-card">
+        <img src="assets/icon/icono-pizza.png.png" alt="Pizza">
+        <p>PIZZA</p>
+    </a>
+    <a href="html/hamburguesa.html" class="categoria-card">
+        <img src="assets/icon/icono-hamburguesa.png.png" alt="Hamburguesa">
+        <p>HAMBURGUESA</p>
+    </a>
+
+    <a href="html/sushi.html" class="categoria-card">
+        <img src="assets/icon/icono-sushi.png.png" alt="Sushi">
+        <p>SUSHI</p>
+    </a>
+
+    <a href="html/vino.html" class="categoria-card">
+        <img src="assets/icon/icono-bebidas.png.png" alt="Bebidas">
+        <p>BEBIDAS</p>
+    </a>
+</section>
+<!--CARRUSEL DE JAVACRIP-->
+ <section class="productos-destacados">
+    <h2>Productos <span class="subrayado">destacados</span></h2>
+
+    <div class="carrusel-productos" id="carrusel">
+
+        <div class="tarjeta-producto">
+            <img src="assets/img/sushi-mix.jpg.jpg" alt="Sushi Mix">
+            <p class="nombre-producto">Sushi Mix</p>
+            <div class="precio-agregar">
+                <span class="precio">$12.00</span>
+                <button class="btn-agregar" data-producto="Sushi Mix" data-precio="12.00">Agregar</button>
+            </div>
+        </div>
+
+         
+
+    </div>
+</section>
+
+    
+</body>
+</html> 
