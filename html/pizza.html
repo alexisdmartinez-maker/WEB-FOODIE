@@ -3,174 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodie - Menú de Pizza</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FOODIE - Menú de Pizza</title>
+
+    <link rel="stylesheet" href="../CSS/diseño.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
-    <header>
+    <!-- Encabezado -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fi fi-sr-spoon"></i> FOODIE <i class="fi fi-sr-fork"></i>
+        </div>
 
-        <h2>FOODIE</h2>
-
-        <nav>
-            <a href="#">INICIO</a>
-            <a href="#">MENÚ</a>
+        <nav class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="../index.html#categorias">Menú</a>
         </nav>
 
-        <span>🛒</span>
-
+        <a href="carrito.html" class="carrito-icon">
+            <i class="fi fi-sr-shopping-cart"></i>
+            <span class="carrito-contador" id="contador-carrito">0</span>
+        </a>
     </header>
 
-    <!-- CONTENIDO -->
-    <main>
+    <!-- Presentación -->
+    <section class="presentacion">
+        <div class="texto">
+            <h1>MENÚ DE PIZZA</h1>
+            <p>
+                Descubre nuestra selección de pizzas artesanales clásicas y especiales,
+                horneadas al estilo tradicional con los mejores ingredientes.
+            </p>
+        </div>
 
-        <!-- Presentación -->
-        <section class="presentacion">
+        <img src="../assets/img/pizza-principal.jpg.jpg" alt="Pizza Principal">
+    </section>
 
-            <div class="texto">
+    <!-- Productos -->
+    <section class="productos">
 
-                <h1>MENÚ DE PIZZA</h1>
-
-                <p>
-                    Descubre nuestra selección de pizzas artesanales
-                    clásicas y especiales, horneadas a lo clásico y
-                    mejores ingredientes.
-                </p>
-
+        <div class="tarjeta-producto">
+            <img src="../assets/img/calzone.jpg.jpg" alt="Calzone">
+            <p class="nombre-producto">Calzone</p>
+            <div class="precio-agregar">
+                <span class="precio">$30.00</span>
+                <button class="btn-agregar"
+                    data-producto="Calzone"
+                    data-precio="30.00">
+                    Agregar
+                </button>
             </div>
-
-            <img src="img/pizza-principal.png" alt="Pizza principal">
-
-        </section>
-
-        <!-- Primera fila -->
-        <section class="productos">
-
-            <article>
-
-                <img src="img/calzone.jpg" alt="Calzone">
-
-                <h3>Calzone</h3>
-
-                <p>$30.00</p>
-
-                <button>Agregar</button>
-
-            </article>
-
-            <article>
-
-                <img src="img/peperoni.jpg" alt="Pizza Pepperoni">
-
-                <h3>Pizza de peperoni con carne</h3>
-
-                <p>$30.00</p>
-
-                <button>Agregar</button>
-
-            </article>
-
-            <article>
-
-                <img src="img/hawaiana.jpg" alt="Pizza Hawaiana">
-
-                <h3>Pizza de hawaiana</h3>
-
-                <p>$29.00</p>
-
-                <button>Agregar</button>
-
-            </article>
-
-        </section>
-
-        <!-- Segunda fila -->
-        <section class="productos">
-
-            <article>
-
-                <img src="img/cuatroquesos.jpg" alt="Pizza Cuatro Quesos">
-
-                <h3>Pizza Cuatro Quesos</h3>
-
-                <p>$11.99</p>
-
-                <button>Agregar</button>
-
-            </article>
-
-            <article>
-
-                <img src="img/margarita.jpg" alt="Pizza Margarita">
-
-                <h3>Pizza Margarita</h3>
-
-                <p>$10.00</p>
-
-                <button>Agregar</button>
-
-            </article>
-
-            <article>
-
-                <img src="img/taglio.jpg" alt="Pizza Taglio">
-
-                <h3>Pizza Taglio</h3>
-
-                <p>$10.99</p>
-
-                <button>Agregar</button>
-
-            </article>
-
-        </section>
-
-    </main>
-
-    <!-- PIE DE PÁGINA -->
-    <footer>
-
-        <div>
-
-            <h3>FOODIE</h3>
-
         </div>
 
-        <div>
+        <div class="tarjeta-producto">
+            <img src="../assets/img/pizza-de-carne-con-pepperoni.jpg.jpg" alt="Pizza Pepperoni con Carne">
+            <p class="nombre-producto">Pizza Pepperoni con Carne</p>
+            <div class="precio-agregar">
+                <span class="precio">$30.00</span>
+                <button class="btn-agregar"
+                    data-producto="Pizza Pepperoni con Carne"
+                    data-precio="30.00">
+                    Agregar
+                </button>
+            </div>
+        </div>
 
+        <div class="tarjeta-producto">
+            <img src="../assets/img/pizza-de-hawuiana.jpg.jpg" alt="Pizza Hawaiana">
+            <p class="nombre-producto">Pizza Hawaiana</p>
+            <div class="precio-agregar">
+                <span class="precio">$29.00</span>
+                <button class="btn-agregar"
+                    data-producto="Pizza Hawaiana"
+                    data-precio="29.00">
+                    Agregar
+                </button>
+            </div>
+        </div>
+
+        <div class="tarjeta-producto">
+            <img src="../assets/img/pizza cuatro queso.jpg.jpg" alt="Pizza Cuatro Quesos">
+            <p class="nombre-producto">Pizza Cuatro Quesos</p>
+            <div class="precio-agregar">
+                <span class="precio">$11.99</span>
+                <button class="btn-agregar"
+                    data-producto="Pizza Cuatro Quesos"
+                    data-precio="11.99">
+                    Agregar
+                </button>
+            </div>
+        </div>
+
+        <div class="tarjeta-producto">
+            <img src="../assets/img/pizza-margarita.jpg.webp" alt="Pizza Margarita">
+            <p class="nombre-producto">Pizza Margarita</p>
+            <div class="precio-agregar">
+                <span class="precio">$10.00</span>
+                <button class="btn-agregar"
+                    data-producto="Pizza Margarita"
+                    data-precio="10.00">
+                    Agregar
+                </button>
+            </div>
+        </div>
+
+        <div class="tarjeta-producto">
+            <img src="../assets/img/pizza-taglio.jpg.jpg" alt="Pizza Taglio">
+            <p class="nombre-producto">Pizza Taglio</p>
+            <div class="precio-agregar">
+                <span class="precio">$10.99</span>
+                <button class="btn-agregar"
+                    data-producto="Pizza Taglio"
+                    data-precio="10.99">
+                    Agregar
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+
+        <div class="footer-logo">
+            <i class="fi fi-sr-spoon"></i> FOODIE <i class="fi fi-sr-fork"></i>
+        </div>
+
+        <div class="footer-col">
             <h4>Síguenos</h4>
-
-            <a href="#">Facebook</a>
-
-            <a href="#">TikTok</a>
-
-            <a href="#">Instagram</a>
-
+            <div class="redes">
+                <a href="#"><i class="fi fi-brands-facebook"></i></a>
+                <a href="#"><i class="fi fi-brands-tik-tok"></i></a>
+                <a href="#"><i class="fi fi-brands-instagram"></i></a>
+            </div>
         </div>
 
-        <div>
-
+        <div class="footer-col">
             <h4>Contáctanos</h4>
-
-            <p>+503 7777 8888</p>
-
-            <p>foodie@gmail.com</p>
-
+            <p><i class="fi fi-sr-call-outgoing"></i> +503 7777 8888</p>
+            <p><i class="fi fi-sr-mailbox-envelope"></i> foodie@gmail.com</p>
         </div>
 
-        <div>
-
+        <div class="footer-col">
             <h4>Dirección</h4>
-
-            <p>Metrocentro</p>
-
-            <p>San Salvador</p>
-
+            <p><i class="fi fi-sr-marker"></i> Metrocentro, San Salvador</p>
         </div>
+
+        <p class="derechos">© 2026 Foodie. Todos los derechos reservados.</p>
 
     </footer>
+
+    <script src="../js/estilos_foodie.js"></script>
 
 </body>
 </html>
