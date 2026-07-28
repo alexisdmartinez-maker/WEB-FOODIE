@@ -3,169 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodie - Menú de Sushi</title>
+    <title>FOODIE - Menú de Sushi</title>
 
-    <link rel="stylesheet" href="style.css">
-
+     <link rel="stylesheet" href="../CSS/diseño.css">
+     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css">
+     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+     <!---link to Google Fonts--->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<header>
-
-    <h2>✎FOODIE</h2>
-
-    <nav>
-        <a href="#">INICIO</a>
-        <a href="#">MENÚ</a>
+ <!--logos y links carrito de suma para javacrip-->
+    <header class="navbar">
+    <div class="logo">
+    <i class="fi fi-sr-spoon"></i>FOODIE<i class="fi fi-sr-fork"></i>
+    </div>
+    <nav class="nav-links">
+    <a href="../index.html">Inicio</a>
+    <a href="../index.html#categorias">Menú</a>
     </nav>
-
-    <span>🛒</span>
-
-</header>
-
-<main>
-
+    <a href="carrito.html" class="carrito-icon">
+    <i class="fi fi-sr-shopping-cart"></i>
+    <span class="carrito-contador" id="contador-carrito">0</span>
+</a>
+    </header>
+    <!--presetacion de menu-->
     <section class="presentacion">
-
         <div class="texto">
-
             <h1>MENÚ DE SUSHI</h1>
-
             <p>
-                Descubre nuestra selección de los mejores
-                akis nigiris y rolls preparados con
+                Descubre nuestra selección de los mejores makis,nigiris y roll preparados con
                 ingredientes frescos.
             </p>
-
         </div>
-
-        <img src="img/sushi-principal.jpg" alt="Sushi">
-
+        <img src="../assets/img/sushi-principal.jpg..jpg"alt="Sushi">
     </section>
-
-    <!-- Primera fila -->
-
     <section class="productos">
+          <div class="tarjeta-producto">
+      <img src="../assets/img/chirashi.jpg.jpg" alt="Chirashi">
+      <p class="nombre-producto">Chirashi</p>
+      <div class="precio-agregar">
+        <span class="precio">$13.50</span>
+        <button class="btn-agregar" data-producto="Chirashi" data-precio="13.50">Agregar</button>
+      </div>
+    </div>
+   
+    <div class="tarjeta-producto">
+      <img src="../assets/img/nigiri.jpg.jpg" alt="Nigiri Sake">
+      <p class="nombre-producto">Nigiri Sake</p>
+      <div class="precio-agregar">
+        <span class="precio">$10.00</span>
+        <button class="btn-agregar" data-producto="Nigiri Sake" data-precio="10.00">Agregar</button>
+       </div>
+      </div>
 
-        <article>
+      <div class="tarjeta-producto">
+      <img src="../assets/img/urikami.jpg.jpg" alt="Urikami">
+      <p class="nombre-producto">Urikami</p>
+      <div class="precio-agregar">
+        <span class="precio">$12.50</span>
+        <button class="btn-agregar" data-producto="Urikami" data-precio="12.50">Agregar</button>
+       </div>
+      </div>
 
-            <img src="img/chirashi.jpg" alt="">
+      <div class="tarjeta-producto">
+      <img src="../assets/img/gunka.jpg.jpg" alt="Gunka">
+      <p class="nombre-producto">Gunka</p>
+      <div class="precio-agregar">
+        <span class="precio">$23.00</span>
+        <button class="btn-agregar" data-producto="Gunka" data-precio="23.00">Agregar</button>
+       </div>
+      </div>
 
-            <h3>Chirashi</h3>
+      <div class="tarjeta-producto">
+      <img src="../assets/img/maki.jpg.jpg" alt="Maki">
+      <p class="nombre-producto">Maki</p>
+      <div class="precio-agregar">
+        <span class="precio">$10.00</span>
+        <button class="btn-agregar" data-producto="Maki" data-precio="10.00">Agregar</button>
+       </div>
+      </div>
 
-            <p>$13.50</p>
-
-            <button>Agregar</button>
-
-        </article>
-
-        <article>
-
-            <img src="img/nigiri.jpg" alt="">
-
-            <h3>Nigiri Sake</h3>
-
-            <p>$10.00</p>
-
-            <button>Agregar</button>
-
-        </article>
-
-        <article>
-
-            <img src="img/urikami.jpg" alt="">
-
-            <h3>Urikami</h3>
-
-            <p>$12.50</p>
-
-            <button>Agregar</button>
-
-        </article>
-
+       <div class="tarjeta-producto">
+      <img src="../assets/img/temaki.jpg.jpg" alt="Temaki">
+      <p class="nombre-producto">Temaki</p>
+      <div class="precio-agregar">
+        <span class="precio">$30.00</span>
+        <button class="btn-agregar" data-producto="Temaki" data-precio="30.00">Agregar</button>
+       </div>
+      </div>
+      
     </section>
-
-    <!-- Segunda fila -->
-
-    <section class="productos">
-
-        <article>
-
-            <img src="img/maki.jpg" alt="">
-
-            <h3>Maki</h3>
-
-            <p>$23.00</p>
-
-            <button>Agregar</button>
-
-        </article>
-
-        <article>
-
-            <img src="img/gunkan.jpg" alt="">
-
-            <h3>Gunkan</h3>
-
-            <p>$12.00</p>
-
-            <button>Agregar</button>
-
-        </article>
-
-        <article>
-
-            <img src="img/tekami.jpg" alt="">
-
-            <h3>Tekami</h3>
-
-            <p>$29.00</p>
-
-            <button>Agregar</button>
-
-        </article>
-
-    </section>
-
-</main>
-
-<footer>
-
-    <div>
-
-        <h3>✎FOODIE</h3>
-
+     <footer class="footer">
+    <div class="footer-logo">
+      <i class="fi fi-sr-spoon"></i> FOODIE <i class="fi fi-sr-fork"></i>
     </div>
 
-    <div>
-
-        <h4>Síguenos</h4>
-
-        <a href="#">Facebook</a>
-        <a href="#">TikTok</a>
-        <a href="#">Instagram</a>
-
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <div class="redes">
+        <a href="#"><i class="fi fi-brands-facebook"></i></a>
+        <a href="#"><i class="fi fi-brands-tik-tok"></i></a>
+        <a href="#"><i class="fi fi-brands-instagram"></i></a>
+      </div>
     </div>
 
-    <div>
-
-        <h4>Contáctanos</h4>
-
-        <p>+503 7777 8888</p>
-        <p>foodie@gmail.com</p>
-
+    <div class="footer-col">
+      <h4>Contáctanos</h4>
+      <p><i class="fi fi-sr-call-outgoing"></i> +503 7777 8888</p>
+      <p><i class="fi fi-sr-mailbox-envelope"></i> Foodie@mejor.com</p>
     </div>
 
-    <div>
-
-        <h4>Dirección</h4>
-
-        <p>Metrocentro</p>
-        <p>San Salvador</p>
-
+    <div class="footer-col">
+      <h4>Dirección</h4>
+      <p><i class="fi fi-sr-marker"></i> Metrocentro, San Salvador</p>
     </div>
 
-</footer>
+    <p class="derechos">© 2026 Foodie, todos los derechos reservados</p>
+  </footer>
+
+  <script src="../js/estilos _foodie.js"></script>
+    
+    
+   
 
 </body>
 </html>
