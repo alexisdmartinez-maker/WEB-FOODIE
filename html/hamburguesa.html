@@ -3,118 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodie</title>
+    <title>FOODIE - Menú de Hamburguesas</title>
+
+    <link rel="stylesheet" href="../CSS/diseño.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Encabezado -->
-    <header>
-        <h2>FOODIE</h2>
+    <header class="navbar">
+        <div class="logo">
+            <i class="fi fi-sr-spoon"></i> FOODIE <i class="fi fi-sr-fork"></i>
+        </div>
 
-        <nav>
-            <a href="#">INICIO</a>
-            <a href="#">MENÚ</a>
+        <nav class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="../index.html#categorias">Menú</a>
         </nav>
 
-        <span>🛒</span>
+        <a href="carrito.html" class="carrito-icon">
+            <i class="fi fi-sr-shopping-cart"></i>
+            <span class="carrito-contador" id="contador-carrito">0</span>
+        </a>
     </header>
 
-    <!-- Contenido principal -->
-    <main>
-
-        <section>
+    <!-- Presentación -->
+    <section class="presentacion">
+        <div class="texto">
             <h1>MENÚ DE HAMBURGUESAS</h1>
-
             <p>
                 Descubre nuestra selección de hamburguesas gourmet clásicas y especiales,
                 preparadas con carne 100% de res y los mejores ingredientes.
             </p>
+        </div>
 
-            <img src="img/hamburguesa-principal.png" alt="Hamburguesa Principal">
-        </section>
+        <img src="../assets/img/hamburguesa-principal.jpg.jpg" alt="Hamburguesa Principal">
+    </section>
 
-        <!-- Primera fila -->
-        <section>
+    <!-- Productos -->
+    <section class="productos">
 
-            <article>
-                <img src="img/h1.jpg" alt="">
-                <h3>Hamburguesa de queso</h3>
-                <p>$6.00</p>
-                <button>Agregar</button>
-            </article>
+        <div class="tarjeta-producto">
+            <img src="../assets/img/hamburguesa-de queso.jpg.jpg" alt="Hamburguesa de queso">
+            <p class="nombre-producto">Hamburguesa de queso</p>
+            <div class="precio-agregar">
+                <span class="precio">$6.00</span>
+                <button class="btn-agregar"
+                    data-producto="Hamburguesa de queso"
+                    data-precio="6.00">
+                    Agregar
+                </button>
+            </div>
+        </div>
 
-            <article>
-                <img src="img/h2.jpg" alt="">
-                <h3>Hamburguesa con cebolla</h3>
-                <p>$7.00</p>
-                <button>Agregar</button>
-            </article>
+        <div class="tarjeta-producto">
+            <img src="../assets/img/hamburguesa-con cebolla.jpg.jpg" alt="Hamburguesa con cebolla">
+            <p class="nombre-producto">Hamburguesa con cebolla</p>
+            <div class="precio-agregar">
+                <span class="precio">$7.00</span>
+                <button class="btn-agregar"
+                    data-producto="Hamburguesa con cebolla"
+                    data-precio="7.00">
+                    Agregar
+                </button>
+            </div>
+        </div>
 
-            <article>
-                <img src="img/h3.jpg" alt="">
-                <h3>Hamburguesa con chile</h3>
-                <p>$6.99</p>
-                <button>Agregar</button>
-            </article>
+        <div class="tarjeta-producto">
+            <img src="../assets/img/hamburguesa-con chile.jpg.jpg" alt="Hamburguesa con chile">
+            <p class="nombre-producto">Hamburguesa con chile</p>
+            <div class="precio-agregar">
+                <span class="precio">$6.99</span>
+                <button class="btn-agregar"
+                    data-producto="Hamburguesa con chile"
+                    data-precio="6.99">
+                    Agregar
+                </button>
+            </div>
+        </div>
 
-        </section>
+        <div class="tarjeta-producto">
+            <img src="../assets/img/hamburguesa-americana.jpg.jpg" alt="Hamburguesa Americana">
+            <p class="nombre-producto">Hamburguesa Americana</p>
+            <div class="precio-agregar">
+                <span class="precio">$8.99</span>
+                <button class="btn-agregar"
+                    data-producto="Hamburguesa Americana"
+                    data-precio="8.99">
+                    Agregar
+                </button>
+            </div>
+        </div>
 
-        <!-- Segunda fila -->
-        <section>
+        <div class="tarjeta-producto">
+            <img src="../assets/img/hambuerguesa-bisonte.jpg.jpg" alt="Hamburguesa Bisonte">
+            <p class="nombre-producto">Hamburguesa Bisonte</p>
+            <div class="precio-agregar">
+                <span class="precio">$13.99</span>
+                <button class="btn-agregar"
+                    data-producto="Hamburguesa Bisonte"
+                    data-precio="13.99">
+                    Agregar
+                </button>
+            </div>
+        </div>
 
-            <article>
-                <img src="img/h4.jpg" alt="">
-                <h3>Hamburguesa Americana</h3>
-                <p>$8.99</p>
-                <button>Agregar</button>
-            </article>
+        <div class="tarjeta-producto">
+            <img src="../assets/img/hamburguesa-doble.jpg.jpg" alt="Hamburguesa Doble">
+            <p class="nombre-producto">Hamburguesa Doble</p>
+            <div class="precio-agregar">
+                <span class="precio">$10.99</span>
+                <button class="btn-agregar"
+                    data-producto="Hamburguesa Doble"
+                    data-precio="10.99">
+                    Agregar
+                </button>
+            </div>
+        </div>
 
-            <article>
-                <img src="img/h5.jpg" alt="">
-                <h3>Hamburguesa Bisonte</h3>
-                <p>$13.99</p>
-                <button>Agregar</button>
-            </article>
-
-            <article>
-                <img src="img/h6.jpg" alt="">
-                <h3>Hamburguesa Doble</h3>
-                <p>$10.99</p>
-                <button>Agregar</button>
-            </article>
-
-        </section>
-
-    </main>
+    </section>
 
     <!-- Pie de página -->
-    <footer>
+    <footer class="footer">
 
-        <div>
-            <h3>FOODIE</h3>
+        <div class="footer-logo">
+            <i class="fi fi-sr-spoon"></i> FOODIE <i class="fi fi-sr-fork"></i>
         </div>
 
-        <div>
+        <div class="footer-col">
             <h4>Síguenos</h4>
-            <a href="#">Facebook</a>
-            <a href="#">TikTok</a>
-            <a href="#">Instagram</a>
+            <div class="redes">
+                <a href="#"><i class="fi fi-brands-facebook"></i></a>
+                <a href="#"><i class="fi fi-brands-tik-tok"></i></a>
+                <a href="#"><i class="fi fi-brands-instagram"></i></a>
+            </div>
         </div>
 
-        <div>
+        <div class="footer-col">
             <h4>Contáctanos</h4>
-            <p>+503 7777-8888</p>
-            <p>foodie@gmail.com</p>
+            <p><i class="fi fi-sr-call-outgoing"></i> +503 7777 8888</p>
+            <p><i class="fi fi-sr-mailbox-envelope"></i> foodie@gmail.com</p>
         </div>
 
-        <div>
+        <div class="footer-col">
             <h4>Dirección</h4>
-            <p>Metrocentro, San Salvador</p>
+            <p><i class="fi fi-sr-marker"></i> Metrocentro, San Salvador</p>
         </div>
 
-        <p>© 2026 Foodie. Todos los derechos reservados.</p>
+        <p class="derechos">© 2026 Foodie. Todos los derechos reservados.</p>
 
     </footer>
+
+    <script src="../js/estilos_foodie.js"></script>
 
 </body>
 </html>
