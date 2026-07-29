@@ -3,147 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodie - Menú de Vinos y Jugos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FOODIE - Menú de Vinos y Jugos</title>
+
+    <link rel="stylesheet" href="../CSS/diseño.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
+    <!-- Barra de navegación -->
+    <header class="navbar">
 
-    <h2>FOODIE</h2>
+        <div class="logo">
+            <i class="fi fi-sr-spoon"></i> FOODIE <i class="fi fi-sr-fork"></i>
+        </div>
 
-    <nav>
-        <a href="#">INICIO</a>
-        <a href="#">MENÚ</a>
-    </nav>
+        <nav class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="../index.html#categorias">Menú</a>
+        </nav>
 
-    <span>🛒</span>
+        <a href="carrito.html" class="carrito-icon">
+            <i class="fi fi-sr-shopping-cart"></i>
+            <span class="carrito-contador" id="contador-carrito">0</span>
+        </a>
 
-</header>
+    </header>
 
-<main>
-
+    <!-- Presentación -->
     <section class="presentacion">
 
-        <div>
-
+        <div class="texto">
             <h1>MENÚ DE VINOS Y JUGOS</h1>
 
             <p>
-                Descubre nuestra selección de vinos exclusivos y
-                jugos naturales, preparados al momento con las
-                frutas más frescas y de la mejor calidad.
+                Descubre nuestra selección de vinos exclusivos y jugos naturales,
+                preparados con frutas frescas y bebidas de la mejor calidad.
             </p>
-
         </div>
 
-        <img src="img/vino-principal.png" alt="Vinos">
+        <img src="../assets/img/vino-principal.jpg" alt="Vinos y Jugos">
 
     </section>
 
-    <!-- Primera fila -->
-
+    <!-- Productos -->
     <section class="productos">
 
-        <article>
+        <div class="tarjeta-producto">
+            <img src="../assets/img/jugo-de-sandia.jpg.jpg" alt="Jugo de Sandía">
+            <p class="nombre-producto">Jugo de Sandía</p>
 
-            <img src="img/sandia.jpg" alt="">
-            <h3>Jugo de sandía</h3>
-            <p>$5.00</p>
-            <button>Agregar</button>
+            <div class="precio-agregar">
+                <span class="precio">$5.00</span>
+                <button class="btn-agregar" data-producto="Jugo de Sandía" data-precio="5.00">
+                    Agregar
+                </button>
+            </div>
+        </div>
 
-        </article>
+        <div class="tarjeta-producto">
+            <img src="../assets/img/jugo-de-kiwi.jpg.jpg" alt="Jugo de Kiwi">
+            <p class="nombre-producto">Jugo de Kiwi</p>
 
-        <article>
+            <div class="precio-agregar">
+                <span class="precio">$5.00</span>
+                <button class="btn-agregar" data-producto="Jugo de Kiwi" data-precio="5.00">
+                    Agregar
+                </button>
+            </div>
+        </div>
 
-            <img src="img/kiwi.jpg" alt="">
-            <h3>Jugo de kiwi</h3>
-            <p>$5.00</p>
-            <button>Agregar</button>
+        <div class="tarjeta-producto">
+            <img src="../assets/img/jugo-de-fresa.jpg.jpg" alt="Jugo de Fresa">
+            <p class="nombre-producto">Jugo de Fresa</p>
 
-        </article>
+            <div class="precio-agregar">
+                <span class="precio">$5.00</span>
+                <button class="btn-agregar" data-producto="Jugo de Fresa" data-precio="5.00">
+                    Agregar
+                </button>
+            </div>
+        </div>
 
-        <article>
+        <div class="tarjeta-producto">
+            <img src="../assets/img/vino-don-melchor.jpg.jpg" alt="Vino Don Melchor">
+            <p class="nombre-producto">Vino Don Melchor</p>
 
-            <img src="img/fresa.jpg" alt="">
-            <h3>Jugo de fresa</h3>
-            <p>$5.00</p>
-            <button>Agregar</button>
+            <div class="precio-agregar">
+                <span class="precio">$80.00</span>
+                <button class="btn-agregar" data-producto="Vino Don Melchor" data-precio="80.00">
+                    Agregar
+                </button>
+            </div>
+        </div>
 
-        </article>
+        <div class="tarjeta-producto">
+            <img src="../assets/img/vino-blanco.jpg.jpg" alt="Vino Blanco">
+            <p class="nombre-producto">Vino Blanco</p>
+
+            <div class="precio-agregar">
+                <span class="precio">$20.99</span>
+                <button class="btn-agregar" data-producto="Vino Blanco" data-precio="20.99">
+                    Agregar
+                </button>
+            </div>
+        </div>
+
+        <div class="tarjeta-producto">
+            <img src="../assets/img/vino-tinto.jpg.jpg" alt="Vino Tinto">
+            <p class="nombre-producto">Vino Tinto</p>
+
+            <div class="precio-agregar">
+                <span class="precio">$8.99</span>
+                <button class="btn-agregar" data-producto="Vino Tinto" data-precio="8.99">
+                    Agregar
+                </button>
+            </div>
+        </div>
 
     </section>
 
-    <!-- Segunda fila -->
+    <!-- Footer -->
+    <footer class="footer">
 
-    <section class="productos">
+        <div class="footer-logo">
+            <i class="fi fi-sr-spoon"></i> FOODIE <i class="fi fi-sr-fork"></i>
+        </div>
 
-        <article>
+        <div class="footer-col">
+            <h4>Síguenos</h4>
 
-            <img src="img/donmelchor.jpg" alt="">
-            <h3>Vino Don Melchor</h3>
-            <p>$80.00</p>
-            <button>Agregar</button>
+            <div class="redes">
+                <a href="#"><i class="fi fi-brands-facebook"></i></a>
+                <a href="#"><i class="fi fi-brands-tik-tok"></i></a>
+                <a href="#"><i class="fi fi-brands-instagram"></i></a>
+            </div>
+        </div>
 
-        </article>
+        <div class="footer-col">
+            <h4>Contáctanos</h4>
 
-        <article>
+            <p><i class="fi fi-sr-call-outgoing"></i> +503 7777 8888</p>
+            <p><i class="fi fi-sr-mailbox-envelope"></i> Foodie@gmail.com</p>
+        </div>
 
-            <img src="img/blanco.jpg" alt="">
-            <h3>Vino Blanco</h3>
-            <p>$20.99</p>
-            <button>Agregar</button>
+        <div class="footer-col">
+            <h4>Dirección</h4>
 
-        </article>
+            <p><i class="fi fi-sr-marker"></i> Metrocentro, San Salvador</p>
+        </div>
 
-        <article>
+        <p class="derechos">
+            © 2026 Foodie. Todos los derechos reservados.
+        </p>
 
-            <img src="img/tinto.jpg" alt="">
-            <h3>Vino Tinto</h3>
-            <p>$8.99</p>
-            <button>Agregar</button>
+    </footer>
 
-        </article>
-
-    </section>
-
-</main>
-
-<footer>
-
-    <div>
-        <h3>FOODIE</h3>
-    </div>
-
-    <div>
-
-        <h4>Síguenos</h4>
-
-        <a href="#">Facebook</a>
-        <a href="#">TikTok</a>
-        <a href="#">Instagram</a>
-
-    </div>
-
-    <div>
-
-        <h4>Contáctanos</h4>
-
-        <p>+503 7777 8888</p>
-        <p>Foodie@gmail.com</p>
-
-    </div>
-
-    <div>
-
-        <h4>Dirección</h4>
-
-        <p>Metrocentro</p>
-        <p>San Salvador</p>
-
-    </div>
-
-</footer>
+    <script src="../js/estilos_foodie.js"></script>
 
 </body>
 </html>
