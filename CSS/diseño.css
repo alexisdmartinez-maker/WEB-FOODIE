@@ -1,229 +1,1594 @@
-/* Fuente */
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Poetsen One", sans-serif;
+    box-sizing: border-box;}
+html {
+     overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overscroll-behavior-y: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 body{
-    background: #f8f8f8;
-    color: #333;
+   font-family:"Poly" ,sans-serif;
+    max-width: 1440px;
+    margin:0 auto;
+    overflow-x: hidden;
 }
 
-/* Barra de navegación */
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #d62828;
-    color: white;
-    padding: 15px 8%;
-    position: sticky;
-    top: 0;
+    padding: 20px 40px;
 }
-
-.logo{
-    font-size: 28px;
-    font-weight: bold;
+.nav-derecha{
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
-
 .nav-links{
     display: flex;
     gap: 30px;
 }
-
-.nav-links a{
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: .3s;
+a {
+    text-decoration:none;
+    color:inherit;
 }
-
-.nav-links a:hover{
-    color: #ffd166;
-}
-
-.carrito-icon{
-    position: relative;
-    color: white;
-    font-size: 28px;
-    text-decoration: none;
-}
-
-.carrito-contador{
-    position: absolute;
-    top: -8px;
-    right: -10px;
-    background: yellow;
-    color: black;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
+.hero{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-}
-
-/* Presentación */
-.presentacion{
-    display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: center;
-    padding: 60px 8%;
-    background: white;
+    padding: 60px 40px;
+    background:
+        radial-gradient(circle at 25% 30%, #f3d7df 0%, transparent 55%),
+        radial-gradient(circle at 75% 70%, #ff7675 0%, transparent 60%),
+        linear-gradient(135deg, #eebbcc 0%, #ff9a8b 55%, #ff7675 100%);
+    background-repeat: no-repeat;
+    background-size: 160% 160%;
+    animation: fondo-flotante 18s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+@keyframes fondo-flotante{
+    0%{ background-position: 20% 20%; }
+    25%{ background-position: 80% 20%; }
+    50%{ background-position: 80% 80%; }
+    75%{ background-position: 20% 80%; }
+    100%{ background-position: 20% 20%; }
 }
 
-.presentacion .texto{
-    width: 50%;
+.hero-texto{
+    max-width: 650px;
 }
-
-.presentacion h1{
-    font-size: 45px;
-    color: #d62828;
-    margin-bottom: 20px;
+.hero-texto h1{
+    font-family: "Poetsen One",sans-serif;
+    font-size: clamp(2rem,5vw,99px);
+    color: #000000;
 }
+.hero-texto p{
+   font-family: "Poly",sans-serif; 
+   font-size: clamp(1rem,2vw,40px);
+   font-weight: 400;
+   color:#000000;
+}
+.hero-imagen{
+    width: 385px;
+    aspect-ratio: 667/609;
+    margin-right: 50px;
+    flex-shrink: 0;
+}
+.hero-imagen img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.btn-ver-menu{
+    display: inline-block;
+    padding: 12px 24px;
+    font-family: "Poetsen One",sans-serif;
+    font-size: 16px;
+    color: #FFffff;
+    background-color: #FF0000;
+    text-align: center;
+    border-radius: 9px;
+    margin-top: 40px;
+}
+                                           /* TARGETAS DE LA PAGINA WEB */
 
-.presentacion p{
+.categoria-card img{
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    
+
+}
+.categoria-card p{
+    font-family: "Poly",sans-serif;
     font-size: 20px;
-    line-height: 1.6;
+    color: #000000;
 }
-
-.presentacion img{
-    width: 420px;
-    border-radius: 20px;
+.lista-categorias{
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    list-style: none;
+    padding: 40px;
 }
+.categoria-card{
+     width: 290px;
+     height: 260px;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 
-/* Productos */
-.productos{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 30px;
-    padding: 60px 8%;
+
+}
+.card-pizza{
+    background-color:#F9D8AE;
+}
+.categoria-card:hover{
+    transform: scale(1.10);
+}
+.card-hamburguesa{
+    background-color: #F5C6BC;
+}
+.card-sushi{
+    background-color: #DADFC1;
+}
+.card-bebidas{
+    background-color: #FAE3D3;
+
+}
+.productos-destacados h2{
+    font-family: "Poetsen One",sans-serif;
+    font-size: 40px;
+    color: #000000;
+    padding: 0 40px;
+    margin-bottom: 40px;
+
+}
+.subrayado{
+    position: relative;
+
+}
+.subrayado::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 4px;
+    background-color: #FF0000;
+    border-radius: 2px;
+}
+/*carrusel de los productos javascript*/
+.carrusel-productos{
+    overflow: hidden;
+    padding: 20px 40px 30px;
+}
+.carrusel-pista{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    will-change: transform;
+    animation: carrusel-scroll 25s linear infinite;
+    animation-play-state: paused;
+}
+.carrusel-pista.listo{
+    animation-play-state: running;
+}
+.carrusel-pista.pausado{
+    animation-play-state: paused;
+}
+@keyframes carrusel-scroll{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(calc(-1 * var(--ancho-carrusel, 50%))); }
 }
 
 .tarjeta-producto{
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    width: 320px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     overflow: hidden;
-    transition: .3s;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
 }
-
 .tarjeta-producto:hover{
-    transform: translateY(-8px);
+    transform: scale(1.08);
 }
-
 .tarjeta-producto img{
     width: 100%;
-    height: 220px;
+    height: 210px;
     object-fit: cover;
+    display: block;
 }
-
+.btn-agregar{
+     padding:4px 13px;
+    font-family: "Poly", sans-serif;
+    font-size: 20px;
+    color: #Ffffff;
+    background-color: #F30000;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+.precio{
+    font-family: "Poetsen One",sans-serif;
+    font-size: 26px;
+    color: #000000;
+    position: relative;
+    padding-bottom: 6px;
+}
 .nombre-producto{
-    text-align: center;
-    font-size: 22px;
-    margin: 15px 0;
-}
+    font-family: "Poly", sans-serif;
+    font-size: 24px;
+    color: #000000;
+    margin: 14px 0 10px;
+    padding: 0 14px;
 
+}
 .precio-agregar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 0 14px 16px;
 }
-
-.precio{
-    color: #d62828;
-    font-size: 22px;
-    font-weight: bold;
+.precio::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff0000;
+    border-radius: 2px;
+  
+                                       /*pie de pagina web de foodie*/
 }
-
-.btn-agregar{
-    background: #d62828;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.btn-agregar:hover{
-    background: #a4161a;
-}
-
-/* Footer */
 .footer{
-    background: #1f1f1f;
-    color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-between;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 50px 8%;
+    gap:30 px;
+    padding: 40px 40px 4px;
+    background-image:
+        radial-gradient(circle at 20% 30%, #FEE9E7 0%, transparent 40%),
+        radial-gradient(circle at 60% 60%, #FDD9D5 0%, transparent 45%),
+        radial-gradient(circle at 85% 20%, #FEE9E7 0%, transparent 50%),
+        linear-gradient(to right, #FEE9E7 0%, #FCE0DC 100%);
+         background-repeat: no-repeat;
+ 
+
+}
+.derechos{
+ width: 100%;
+ flex-basis:100%;
+ text-align: center;
+ margin-top: 0px;
+ align-self: flex-end;
+ font-family: "Poly",sans-serif;
+ font-size: 13px;
 }
 
 .footer-logo{
-    font-size: 28px;
+font-family: "Poly",sans-serif;
+font-size: 22px;
+color: #000000;
 }
-
-.footer-col h4{
-    margin-bottom: 15px;
+.footer-col{
+    text-align: center;
 }
-
-.footer-col p{
-    margin: 8px 0;
+.footer-col h3{
+    font-family: "Poly",sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #000000;
 }
-
 .redes{
     display: flex;
-    gap: 15px;
+    gap: 16px;
+    justify-content: center;
+
+}
+.icono-facebook {
+  color: #316FF6; 
+  background-color: white; 
+  border-radius: 50%; 
+  width: 1em; 
+  height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: 28px;
+}
+.icono-facebook:hover {
+  transform: scale(1.1);
 }
 
-.redes a{
-    color: white;
-    font-size: 28px;
-    transition: .3s;
+
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;  
+  height: 28px; 
+  border-radius: 6px; 
+  vertical-align: middle;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  text-decoration: none; 
+  transition: all 0.3s ease;
+}
+.btn-instagram i {
+  color: #FFFFFF; 
+  font-size: 18px; 
+  line-height: 1;
 }
 
-.redes a:hover{
-    color: #ffd166;
+.btn-instagram:hover {
+  transform: scale(1.1);
 }
+.fa-tiktok {
+  
+  color: #111111; 
+  font-size: 26px; 
+  text-shadow: -1px 1px 0px #24f6f0, 1px -1px 0px #fe2c55;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.fa-tiktok:hover {
+  transform: scale(1.1);
+  text-shadow: -1.5px 1.5px 0px #24f6f0, 1.5px -1.5px 0px #fe2c55;
+}
+.redes a,.redes i{
+    vertical-align: middle;
+}
+address p{
+    margin-bottom: 9px;
 
-.derechos{
+}
+                                    /*diseño de sushi*/
+main.fondo-menu {
+    background-image:
+        radial-gradient(circle at 30% 40%, #eebbcc 0%, transparent 55%),
+        radial-gradient(circle at 75% 60%, #ff3d3d 0%, transparent 60%),
+        linear-gradient(to right, #eebbcc 0%, #ff3d3d 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+.presentacion{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 35px 50px;
+  
+ 
+}
+.presentacion img{
+ width: 100%;
+ max-width: 450px;
+ aspect-ratio: 4000/2667;
+ object-fit: contain;
+}
+.presentacion-sushi .texto {
+  max-width: 520px;
+  text-align: left;
+  margin-top: 20px;
+  
+}
+.presentacion-sushi .texto p{
+    font-size: 2.20rem;
+    line-height: 1.5;
+    
+  }
+.presentacion .texto h1{
+  font-family: "Podkova",sans-serif;
+  font-size: clamp(2.5rem,5vw,60px);
+  color: #000;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  display: inline-flex;
+  border-bottom: 4px solid #ff0000;
+  padding-bottom: 4px;
+}
+.lista-productos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    list-style: none;
+    padding: 0 50px 40px;
+    margin: 0;
+}
+.tarjeta-sushi{
+    width: 320px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+.tarjeta-sushi:hover{
+    transform: scale(1.08);
+}
+.tarjeta-sushi img{
     width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+.btn-agregar{
+     padding:4px 13px;
+    font-family: "Poly", sans-serif;
+    font-size: 20px;
+    color: #Ffffff;
+    background-color: #F30000;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+.precio{
+    font-family: "Poetsen One",sans-serif;
+    font-size: 26px;
+    color: #000000;
+    position: relative;
+    padding-bottom: 6px;
+}
+.nombre-producto{
+    font-family: "Poly", sans-serif;
+    font-size: 24px;
+    color: #000000;
+    margin: 14px 0 10px;
+    padding: 0 14px;
+
+}
+.precio-agregar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14px 16px;
+}
+.precio::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff0000;
+    border-radius: 2px;
+}
+                                   /*estilos de pizza*/
+.presentacion-pizza .texto h1{
+    font-size: clamp(2.5rem,5vw,60px);
+}
+.presentacion-pizza p{
+    font-size: 2.20rem;
+    line-height: 1.5;
+
+}
+.presentacion-pizza .texto{
+    padding: 30px;
+    padding-left: 10px;
+}
+.tarjeta-pizza{
+    width: 320px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+.tarjeta-pizza:hover{
+    transform: scale(1.08);
+}
+.tarjeta-pizza img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+.btn-agregar{
+     padding:4px 13px;
+    font-family: "Poly", sans-serif;
+    font-size: 20px;
+    color: #Ffffff;
+    background-color: #F30000;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+.precio{
+    font-family: "Poetsen One",sans-serif;
+    font-size: 26px;
+    color: #000000;
+    position: relative;
+    padding-bottom: 6px;
+}
+.nombre-producto{
+    font-family: "Poly", sans-serif;
+    font-size: 24px;
+    color: #000000;
+    margin: 14px 0 10px;
+    padding: 0 14px;
+
+}
+.precio-agregar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14px 16px;
+}
+.precio::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff0000;
+    border-radius: 2px;
+}
+                             /*estilos de hamburgesas*/
+.presentacion-hamburguesa img{
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.presentacion-hamburguesa .texto h1{
+    font-size: clamp(2rem,4vw,58px);
+}
+.presentacion-hamburguesa .texto p{
+    font-size: 1.79rem;
+    line-height: 1.9;
+}
+.presentacion-hamburguesa .texto{
+    padding: 30px;
+    padding-left: 0px;
+    
+}
+.tarjeta-hamburguesa{
+    width: 320px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+.tarjeta-hamburguesa:hover{
+    transform: scale(1.08);
+}
+.tarjeta-hamburguesa img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+.btn-agregar{
+     padding:4px 13px;
+    font-family: "Poly", sans-serif;
+    font-size: 20px;
+    color: #Ffffff;
+    background-color: #F30000;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+.precio{
+    font-family: "Poetsen One",sans-serif;
+    font-size: 26px;
+    color: #000000;
+    position: relative;
+    padding-bottom: 6px;
+}
+.nombre-producto{
+    font-family: "Poly", sans-serif;
+    font-size: 24px;
+    color: #000000;
+    margin: 14px 0 10px;
+    padding: 0 14px;
+
+}
+.precio-agregar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14px 16px;
+}
+.precio::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff0000;
+    border-radius: 2px;
+}
+                                /*estilos de vino y jugo*/
+.presentacion-vino img{
+    width: 100%;
+    max-width: 350px;
+   aspect-ratio: 1/1;
+   object-fit: cover;
+   border-radius: 50%;
+}
+.presentacion-vino .texto h1{
+    font-size: clamp(2rem,4vw,58px);
+}
+.presentacion-vino .texto p{
+    font-size: 1.89rem;
+    line-height: 1.9;
+}
+.presentacion-vino .texto{
+    padding: 30px;
+    padding-left: 0px;
+}.tarjeta-vino{
+    width: 320px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+.tarjeta-vino:hover{
+    transform: scale(1.08);
+}
+.tarjeta-vino img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+.btn-agregar{
+     padding:4px 13px;
+    font-family: "Poly", sans-serif;
+    font-size: 20px;
+    color: #Ffffff;
+    background-color: #F30000;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+.precio{
+    font-family: "Poetsen One",sans-serif;
+    font-size: 26px;
+    color: #000000;
+    position: relative;
+    padding-bottom: 6px;
+}
+.nombre-producto{
+    font-family: "Poly", sans-serif;
+    font-size: 24px;
+    color: #000000;
+    margin: 14px 0 10px;
+    padding: 0 14px;
+
+}
+.precio-agregar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14px 16px;
+}
+.precio::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff0000;
+    border-radius: 2px;
+
+}
+
+
+
+                              /*CARRITO DE JAVACRIPT*/
+.titulo-pedido{
+    background-image:
+        radial-gradient(circle at 30% 40%, #eebbcc 0%, transparent 55%),
+        radial-gradient(circle at 75% 60%, #ff3d3d 0%, transparent 60%),
+        linear-gradient(to right, #eebbcc 0%, #ff3d3d 100%);
+    padding: 40px 50px;
     text-align: center;
-    margin-top: 30px;
-    border-top: 1px solid gray;
-    padding-top: 20px;
 }
+.titulo-pedido h1{
+    font-family: "Poetsen One",sans-serif;
+    font-size: clamp(1.8rem,4vw,50px);
+}
+.carrito-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 50px;
+    flex-wrap: wrap;
+}
+.resumen-pedido{
+    flex: 1 1 500px;
+    max-width: 560px;
+    background-color: #DADFC1;
+    border-radius: 20px;
+    padding: 25px 30px;
+    box-shadow:  0 4px 12px rgba(0,0,0,0.1);
+    position:relative;
+    left: -115px;
+}
+.resumen-pedido h2{
+    font-family: "Poetsen One",sans-serif;
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 15px;
+    
+}
+.item-carrito{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.item-carrito img{
+    width: 120px;
+    height: 80px ;
+    object-fit: cover;
+    border-radius: 14px;
+    flex-shrink: 0;
+}
+.item-info{
+    flex: 1;
+}
+.item-nombre{
+    font-family: "Poly",sans-serif;
+    font-size: 17px;
+    color: #000000;
+    margin-bottom: 6px;
+}
+.cantidad-control{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cantidad-control button{
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 8px;
+    background-color: #Ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    font-family: "Poly", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+.cantidad-control.cantidad{
+    font-family: "Poly",sans-serif;
+    font-size:15px;
+}
+.item-subtotal{
+    font-family: "Poetsen One",sans-serif;
+    font-size: 16px;
+    color: #000000;
+    white-space: nowrap;
+}
+.totales{
+    margin-top: 15px;
+}
+.totales p{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Poly",sans-serif;
+    font-size: 17px;
+    color: #000000;
+    padding: 6px 0;
+}
+                        /*comluna derecha mapa de google*/
+.direccion-entrega{
+    flex: 1 1 350px;
+    max-width: 400px;
+    background-color: #fde6e6;
+    border-radius: 20px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 
-/* Responsive */
-@media(max-width:768px){
+}
+.direccion-entrega h2{
+    font-family: "Poetsen One",sans-serif;
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+.mapa-contenedor{
+    width: 100%;
+    height: 150px;
+    background-color: #d9d9d9;
+    border-radius: 14px;
+    margin-bottom: 15px;
+}
+.direccion-entrega label{
+    display: block;
+    font-family: "Poly",sans-serif;
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 6px;
+    margin-top: 12px;
+}
+.direccion-entrega input
+.direccion-entrega textarea{
+    width: 100px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 12px;
+    font-family:"Poly",sans-serif ;
+    font-size: 14px;
+    background-color: #Ffffff;
+    resize: none;
+}
+.direccion-entrega textarea{
+    min-height: 60px;
+}
+.total-pagar{
+    background-color: #fbdca6;
+    border-radius: 16px;
+    padding: 14px 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.total-pagar h3{
+    font-family: "Poly",sans-serif;
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 4px;
+}
+.monto-total{
+    font-family: "Poetsen One",sans-serif;
+    font-size: 26px;
+    color: #000000;
+}
+.btn-finalizar{
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff0000;
+    color: #Ffffff;
+    font-family: "Poetsen One",sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn-agregar-mas{
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    font-family: "Poly",sans-serif;
+    font-size: 14px;
+    color: #000000;
+    text-decoration: underline;
+}
+.carrusel-productos{
+    overflow: hidden;
+    padding: 20px 40px 30px;
+}
+.carrusel-pista{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    will-change: transform;
+    animation: carrusel-scroll 25s linear infinite;
+    animation-play-state: paused;
+    align-items: stretch;
+}
+.carrusel-pista.listo{
+    animation-play-state: running;
+}
+.carrusel-pista.pausado{
+    animation-play-state: paused;
+}
+@keyframes carrusel-scroll{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(calc(-1 * var(--ancho-carrusel, 50%))); }
+}
+.carrusel-pista .tarjeta-producto{
+    display: flex;
+    flex-direction: column;
+}
+.carrusel-pista .precio-agregar{
+    margin-top: auto;
 
-    .navbar{
-        flex-direction: column;
+}/*kknkjj*/
+
+
+/*ajuste para el celular*/
+ @media (max-width: 768px) {
+   .navbar {
+        flex-direction: row; /* Todo en una sola fila */
+        justify-content: space-between; /* Logo a la izq, menú a la der */
+        align-items: center;
+        padding: 12px 20px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .logo {
+        font-size: 1.1rem; /* Logo un poco más discreto */
+    }
+
+    .nav-derecha {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px; /* Espacio limpio entre menú y carrito */
+        width: auto; /* Ya no ocupa el 100% del ancho */
+        margin-top: 0;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         gap: 15px;
     }
 
-    .presentacion{
+    .nav-links a, .carrito-icon {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+    } 
+
+                                                  /*hero*/
+    .hero {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        padding: 20px 20px 30px;
+        overflow: hidden;
     }
 
-    .presentacion .texto{
+    /* 1. Ponemos la imagen PRIMERO */
+    .hero-imagen {
+        order: 1;
+        width: 260px; /* Le damos suficiente espacio */
+        height: auto; /* Dejamos que la altura se ajuste sola al círculo */
+        max-width: 85vw; /* Asegura que nunca se salga de la pantalla del celular */
+        margin: 10px auto 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-imagen img {
         width: 100%;
-        margin-bottom: 30px;
+        height: auto; 
+        object-fit: contain; 
     }
 
-    .presentacion img{
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .precio-agregar{
+    /* 2. Ponemos el texto y el botón SEGUNDO */
+    .hero-texto {
+        order: 2;
+        max-width: 100%;
+        display: flex;
         flex-direction: column;
-        gap: 15px;
+        align-items: center;
     }
+
+    .hero-texto h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .hero-texto p {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+                           /*categorias de imagen */
+   .productos-destacados h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 20px 0 15px;
+    }
+
+    .lista-categorias {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas iguales */
+        gap: 12px; /* Espacio uniforme entre tarjetas */
+        padding: 0 20px ;
+        margin-top: 25px;
+        list-style: none;
+    }
+
+    .lista-categorias li {
+        display: flex;
+    }
+
+    .lista-categorias a {
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .categoria-card {
+     width: 100%;
+        height: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        /* Quitamos el background-color fijo para que use los colores de tu CSS principal */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);   
+    }
+
+    .categoria-card img {
+        width: 65px;
+        height: 65px;
+        object-fit: contain;
+        margin-bottom: 8px;
+    }
+
+    .categoria-card p {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #333;
+        margin: 0;
+    }
+
+                                                  /*carrusel de por dios*/
+   .carrusel-productos{
+        padding: 20px 30px 30px;
+    }
+    .carrusel-pista{
+        gap: 20px;
+    }
+    .tarjeta-producto {
+        width: calc(100vw - 100px);
+        max-width: 280px;
+    }
+    .precio-agregar{
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .btn-agregar{
+        font-size: 15px;
+        padding: 6px 12px;
+    }
+    .precio{
+        font-size: 20px;
+    }
+     
+    .nombre-producto{
+        font-size: 18px;
+    }
+    .tarjeta-producto img{
+        height: 120px;
+    }
+   
+    
+   .footer {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* Divide en 2 columnas */
+        gap: 25px 15px !important;
+        padding: 30px 20px !important;
+    }
+
+    /* 1. Logo centrado en la parte superior */
+    .footer-logo {
+        grid-column: span 2 !important;
+        text-align: center !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* 2. Cada columna centrada con su propio contenido */
+    .footer-col {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* 3. Íconos centrados justo debajo de "Síguenos" */
+    .redes {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    /* 4. Dirección centrada abarcando ambas columnas */
+    .footer-col:last-of-type {
+        grid-column: span 2 !important;
+        text-align: center !important;
+    }
+
+    /* 5. Copyright centrado al final */
+    .derechos {
+        grid-column: span 2 !important;
+        text-align: center !important;
+        margin-top: 10px !important;
+        padding-top: 15px !important;
+        border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+                                            /*ajuste de las paginas de comida pizza*/
+   .presentacion-pizza {
+        display: flex !important;
+        flex-direction: row !important; /* Texto a la izquierda, imagen a la derecha */
+        align-items: center !important;
+        justify-content: space-between !important;
+        text-align: left !important;
+        padding: 20px 15px !important;
+        gap: 12px !important;
+    }
+
+    .presentacion-pizza .texto {
+        flex: 1 !important;
+        padding: 0 !important;
+    }
+
+    .presentacion-pizza .texto h1 {
+     font-size: 1.4rem !important; /* Tamaño legible sin ocupar toda la pantalla */
+        margin-bottom: 8px !important;
+        border-bottom-width: 3px !important;
+    
+    }
+
+    .presentacion-pizza .texto p {
+       font-size: 0.9rem !important; /* Tamaño cómodo para lectura en móvil */
+        line-height: 1.35 !important;
+        
+    }
+ 
+       .presentacion-pizza img {
+    width: 55% !important;
+    max-width: 130px !important;
+    height: auto !important;
+    object-fit: contain !important;
+       }
+    
+                                   /*lista de productos*/
+
+   .lista-productos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 20px 16px 35px;
+    margin: 0;
+    list-style: none;
 }
+
+.lista-productos li {
+    width: 100%;
+    display: flex;
+}
+
+.tarjeta-pizza{
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    height: auto;
+    min-height: 195px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.tarjeta-pizza img {
+    width: 100%;
+    height: 115px;
+    object-fit: cover;
+    display: block;
+}
+
+.nombre-pizza {
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 1.2;
+
+    margin: 0;
+    padding: 8px;
+}
+
+.precio-agregar {
+    width: 100%;
+    margin-top: 8;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 6px;
+    padding: 8px 10px 12px;
+}
+
+.precio {
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.btn-agregar {
+    font-size: 13px;
+    padding: 6px 9px;
+    white-space: nowrap;
+}
+                                    /*hamburgesa*/
+
+.presentacion-hamburguesa {
+        display: flex !important;
+        flex-direction: row !important; /* Texto a la izquierda, imagen a la derecha */
+        align-items: center !important;
+        justify-content: space-between !important;
+        text-align: left !important;
+        padding: 20px 15px !important;
+        gap: 12px !important;
+    }
+
+    .presentacion-hamburguesa .texto {
+        flex: 1 !important;
+        padding: 0 !important;
+    }
+    .presentacion-hamburguesa .texto h1 {
+     font-size: 1.4rem !important; /* Tamaño legible sin ocupar toda la pantalla */
+        margin-bottom: 8px !important;
+        border-bottom-width: 3px !important;
+    
+    }
+
+    .presentacion-hamburguesa .texto p {
+       font-size: 0.9rem !important; /* Tamaño cómodo para lectura en móvil */
+        line-height: 1.35 !important;
+        
+    }
+ 
+       .presentacion-hamburguesa img {
+    width: 55% !important;
+    max-width: 130px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+  .lista-productos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 20px 16px 35px;
+    margin: 0;
+    list-style: none;
+}
+
+.lista-productos li {
+    width: 100%;
+    display: flex;
+}
+
+.tarjeta-hamburguesa{
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    height: auto;
+    min-height: 195px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.tarjeta-hamburguesa img {
+    width: 100%;
+    height: 115px;
+    object-fit: cover;
+    display: block;
+}
+
+.nombre-hamburguesa {
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 1.2;
+
+    margin: 0;
+    padding: 8px;
+}
+
+.precio-agregar {
+    width: 100%;
+    margin-top: 8;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 6px;
+    padding: 8px 10px 12px;
+}
+
+.precio {
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.btn-agregar {
+    font-size: 13px;
+    padding: 6px 9px;
+    white-space: nowrap;
+
+
+ }
+ 
+                                    /*sushi*/
+.presentacion-sushi {
+        display: flex !important;
+        flex-direction: row !important; /* Texto a la izquierda, imagen a la derecha */
+        align-items: center !important;
+        justify-content: space-between !important;
+        text-align: left !important;
+        padding: 20px 15px !important;
+        gap: 12px !important;
+    }
+
+    .presentacion-sushi .texto {
+        flex: 1 !important;
+        padding: 0 !important;
+    }
+    .presentacion-sushi .texto h1 {
+     font-size: 1.4rem !important; /* Tamaño legible sin ocupar toda la pantalla */
+        margin-bottom: 8px !important;
+        border-bottom-width: 3px !important;
+    
+    }
+
+    .presentacion-sushi .texto p {
+       font-size: 0.9rem !important; /* Tamaño cómodo para lectura en móvil */
+        line-height: 1.35 !important;
+        
+    }
+ 
+       .presentacion-sushi img {
+    width: 55% !important;
+    max-width: 130px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+  .lista-productos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 20px 16px 35px;
+    margin: 0;
+    list-style: none;
+}
+
+.lista-productos li {
+    width: 100%;
+    display: flex;
+}
+.tarjeta-sushi{
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    height: auto;
+    min-height: 195px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.tarjeta-sushi img {
+    width: 100%;
+    height: 115px;
+    object-fit: cover;
+    display: block;
+}
+
+.nombre-sushi {
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 1.2;
+
+    margin: 0;
+    padding: 8px;
+}
+
+.precio-agregar {
+    width: 100%;
+    margin-top: 8;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 6px;
+    padding: 8px 10px 12px;
+}
+
+.precio {
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.btn-agregar {
+    font-size: 13px;
+    padding: 6px 9px;
+    white-space: nowrap;
+ }
+                               /*vino*/
+    .presentacion-vino {
+        display: flex !important;
+        flex-direction: row !important; /* Texto a la izquierda, imagen a la derecha */
+        align-items: center !important;
+        justify-content: space-between !important;
+        text-align: left !important;
+        padding: 20px 15px !important;
+        gap: 12px !important;
+    }
+
+    .presentacion-vino .texto {
+        flex: 1 !important;
+        padding: 0 !important;
+    }
+    .presentacion-vino .texto h1 {
+     font-size: 1.4rem !important; /* Tamaño legible sin ocupar toda la pantalla */
+        margin-bottom: 8px !important;
+        border-bottom-width: 3px !important;
+    
+    }
+
+    .presentacion-vino .texto p {
+       font-size: 0.9rem !important; /* Tamaño cómodo para lectura en móvil */
+        line-height: 1.35 !important;
+        
+    }
+ 
+       .presentacion-vino img {
+       width: 110px;       
+        height: 110px;
+}
+  .lista-productos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 20px 16px 35px;
+    margin: 0;
+    list-style: none;
+}
+
+  .lista-productos li {
+    width: 100%;
+    display: flex;
+   }
+   .tarjeta-vino{
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    height: auto;
+    min-height: 195px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.tarjeta-vino img {
+    width: 100%;
+    height: 115px;
+    object-fit: cover;
+    display: block;
+}
+
+.nombre-vino {
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 1.2;
+
+    margin: 0;
+    padding: 8px;
+}
+
+.precio-agregar {
+    width: 100%;
+    margin-top: 8;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 6px;
+    padding: 8px 10px 12px;
+}
+
+.precio {
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.btn-agregar {
+    font-size: 13px;
+    padding: 6px 9px;
+    white-space: nowrap;
+
+} 
+                                      /*carrito*/ 
+.carrito-container{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .resumen-pedido{
+      flex: none;
+      left: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+    .direccion-entrega{
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+    }
+    .item-carrito img{
+        width: 80px;
+        height: 60px;
+    }
+    .item-nombre{
+        font-size: 15px;
+    }
+
+}
+                    
+    

@@ -6,166 +6,181 @@
     <title>FOODIE - Menú de Vinos y Jugos</title>
 
     <link rel="stylesheet" href="../CSS/diseño.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poly:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-    <!-- Barra de navegación -->
+    <!-- HEADER: logo + navegación + carrito -->
     <header class="navbar">
-
         <div class="logo">
-            <i class="fi fi-sr-spoon"></i> FOODIE <i class="fi fi-sr-fork"></i>
+            <i class="fi fi-sr-spoon" aria-hidden="true"></i> FOODIE <i class="fi fi-sr-fork" aria-hidden="true"></i>
         </div>
-
-        <nav class="nav-links">
-            <a href="../index.html">Inicio</a>
-            <a href="../index.html#categorias">Menú</a>
+        <nav class="nav-derecha" aria-label="Navegación principal">
+            <div class="nav-links">
+                <a href="../index.html">INICIO</a>
+                <a href="../index.html#categorias">MENÚ</a>
+            </div>
+            <a href="carrito.html" class="carrito-icon" aria-label="Ver carrito de compras">
+                <i class="fi fi-sr-shopping-cart" aria-hidden="true"></i>
+                <span class="carrito-contador" id="contador-carrito">0</span>
+            </a>
         </nav>
-
-        <a href="carrito.html" class="carrito-icon">
-            <i class="fi fi-sr-shopping-cart"></i>
-            <span class="carrito-contador" id="contador-carrito">0</span>
-        </a>
-
     </header>
 
-    <!-- Presentación -->
-    <section class="presentacion">
-
-        <div class="texto">
-            <h1>MENÚ DE VINOS Y JUGOS</h1>
-
-            <p>
-                Descubre nuestra selección de vinos exclusivos y jugos naturales,
-                preparados con frutas frescas y bebidas de la mejor calidad.
-            </p>
-        </div>
-
-        <img src="../assets/img/vino-principal.jpg" alt="Vinos y Jugos">
-
-    </section>
-
-    <!-- Productos -->
-    <section class="productos">
-
-        <div class="tarjeta-producto">
-            <img src="../assets/img/jugo-de-sandia.jpg.jpg" alt="Jugo de Sandía">
-            <p class="nombre-producto">Jugo de Sandía</p>
-
-            <div class="precio-agregar">
-                <span class="precio">$5.00</span>
-                <button class="btn-agregar" data-producto="Jugo de Sandía" data-precio="5.00">
-                    Agregar
-                </button>
+    <main class="fondo-menu">
+        <!-- PRESENTACIÓN DEL MENÚ -->
+        <section class="presentacion presentacion-vino" aria-label="Presentación del menú de vinos y jugos">
+            <div class="texto">
+                <h1>MENÚ DE VINOS Y JUGOS</h1>
+                <p>Descubre nuestra selección de vinos exclusivos y jugos naturales, preparados con frutas frescas y bebidas de la mejor calidad.</p>
             </div>
-        </div>
+            <img src="../assets/icon/vino y bebidad.phg.png" alt="Vinos y Jugos">
+        </section>
 
-        <div class="tarjeta-producto">
-            <img src="../assets/img/jugo-de-kiwi.jpg.jpg" alt="Jugo de Kiwi">
-            <p class="nombre-producto">Jugo de Kiwi</p>
+        <!-- PRODUCTOS DE VINO Y JUGO -->
+        <section class="productos-menu" aria-labelledby="titulo-productos-vino">
+            <ul class="lista-productos">
 
-            <div class="precio-agregar">
-                <span class="precio">$5.00</span>
-                <button class="btn-agregar" data-producto="Jugo de Kiwi" data-precio="5.00">
-                    Agregar
-                </button>
-            </div>
-        </div>
+                <li>
+                    <article class=" tarjeta-vino">
+                        <figure>
+                            <img src="../assets/img/jugo-de-sandia.jpg.jpg" alt="Jugo de Sandía">
+                            <figcaption class="nombre-producto">Jugo de Sandía</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$5.00</span>
+                            <button class="btn-agregar" data-producto="Jugo de Sandía" data-precio="5.00" data-imagen="../assets/img/jugo-de-sandia.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
 
-        <div class="tarjeta-producto">
-            <img src="../assets/img/jugo-de-fresa.jpg.jpg" alt="Jugo de Fresa">
-            <p class="nombre-producto">Jugo de Fresa</p>
+                <li>
+                    <article class=" tarjeta-vino">
+                        <figure>
+                            <img src="../assets/img/jugo-de-kiwi.jpg.jpg" alt="Jugo de Kiwi">
+                            <figcaption class="nombre-producto">Jugo de Kiwi</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$5.00</span>
+                          <button class="btn-agregar" data-producto="Jugo de Kiwi" data-precio="5.00" data-imagen="../assets/img/jugo-de-kiwi.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
 
-            <div class="precio-agregar">
-                <span class="precio">$5.00</span>
-                <button class="btn-agregar" data-producto="Jugo de Fresa" data-precio="5.00">
-                    Agregar
-                </button>
-            </div>
-        </div>
+                <li>
+                    <article class=" tarjeta-vino">
+                        <figure>
+                            <img src="../assets/img/jugo-de-fresa.jpg.jpg" alt="Jugo de Fresa">
+                            <figcaption class="nombre-producto">Jugo de Fresa Natural</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$5.00</span>
+                          <button class="btn-agregar" data-producto="Jugo de Fresa" data-precio="5.00" data-imagen="../assets/img/jugo-de-fresa.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
 
-        <div class="tarjeta-producto">
-            <img src="../assets/img/vino-don-melchor.jpg.jpg" alt="Vino Don Melchor">
-            <p class="nombre-producto">Vino Don Melchor</p>
+                <li>
+                    <article class=" tarjeta-vino">
+                        <figure>
+                            <img src="../assets/img/vino-don-melchor.jpg.jpg" alt="Vino Don Melchor">
+                            <figcaption class="nombre-producto">Vino Don Melchor</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$80.00</span>
+                            <button class="btn-agregar" data-producto="Vino Don Melchor" data-precio="80.00" data-imagen="../assets/img/vino-don-melchor.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
 
-            <div class="precio-agregar">
-                <span class="precio">$80.00</span>
-                <button class="btn-agregar" data-producto="Vino Don Melchor" data-precio="80.00">
-                    Agregar
-                </button>
-            </div>
-        </div>
+                <li>
+                    <article class=" tarjeta-vino">
+                        <figure>
+                            <img src="../assets/img/vino-blanco.jpg.jpg" alt="Vino Blanco">
+                            <figcaption class="nombre-producto">Vino Blanco</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$20.99</span>
+                            <button class="btn-agregar" data-producto="Vino Blanco" data-precio="20.99" data-imagen="../assets/img/vino-blanco.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
 
-        <div class="tarjeta-producto">
-            <img src="../assets/img/vino-blanco.jpg.jpg" alt="Vino Blanco">
-            <p class="nombre-producto">Vino Blanco</p>
+                <li>
+                    <article class=" tarjeta-vino">
+                        <figure>
+                            <img src="../assets/img/vino-tinto.jpg.jpg" alt="Vino Tinto">
+                            <figcaption class="nombre-producto">Vino Tinto</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$8.99</span>
+                           <button class="btn-agregar" data-producto="Vino Tinto" data-precio="8.99" data-imagen="../assets/img/vino-tinto.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
 
-            <div class="precio-agregar">
-                <span class="precio">$20.99</span>
-                <button class="btn-agregar" data-producto="Vino Blanco" data-precio="20.99">
-                    Agregar
-                </button>
-            </div>
-        </div>
+            </ul>
+        </section>
+    </main>
 
-        <div class="tarjeta-producto">
-            <img src="../assets/img/vino-tinto.jpg.jpg" alt="Vino Tinto">
-            <p class="nombre-producto">Vino Tinto</p>
-
-            <div class="precio-agregar">
-                <span class="precio">$8.99</span>
-                <button class="btn-agregar" data-producto="Vino Tinto" data-precio="8.99">
-                    Agregar
-                </button>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer">
-
         <div class="footer-logo">
-            <i class="fi fi-sr-spoon"></i> FOODIE <i class="fi fi-sr-fork"></i>
+            <i class="fi fi-sr-spoon" aria-hidden="true"></i>FOODIE<i class="fi fi-sr-fork" aria-hidden="true"></i>
         </div>
 
-        <div class="footer-col">
-            <h4>Síguenos</h4>
-
+        <section class="footer-col" aria-labelledby="titulo-redes">
+            <h3 id="titulo-redes">Síguenos</h3>
             <div class="redes">
-                <a href="#"><i class="fi fi-brands-facebook"></i></a>
-                <a href="#"><i class="fi fi-brands-tik-tok"></i></a>
-                <a href="#"><i class="fi fi-brands-instagram"></i></a>
+               
+            <a href="https://www.facebook.com/TU_PAGINA_AQUI" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Facebook">
+        <i class="fa-brands fa-facebook icono-facebook"></i>
+    </a>
+
+    <a href="https://www.tiktok.com/@TU_USUARIO_AQUI" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="TikTok">
+        <i class="fa-brands fa-tiktok"></i>
+    </a>
+
+    <a href="https://www.instagram.com/TU_USUARIO_AQUI" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Instagram" 
+       class="btn-instagram">
+        <i class="fa-brands fa-instagram"></i>
+                                             </a>
             </div>
-        </div>
+        </section>
 
-        <div class="footer-col">
-            <h4>Contáctanos</h4>
+        <section class="footer-col" aria-labelledby="titulo-contacto">
+            <h3 id="titulo-contacto">Contáctanos</h3>
+            <address>
+                <p><i class="fi fi-sr-call-outgoing" aria-hidden="true"></i> <a href="tel:+50377778888">+503 7777-8888</a></p>
+                <p><i class="fi fi-sr-mailbox-envelope" aria-hidden="true"></i> <a href="mailto:Foodie@mejor.com">Foodie@mejor.com</a></p>
+            </address>
+        </section>
 
-            <p><i class="fi fi-sr-call-outgoing"></i> +503 7777 8888</p>
-            <p><i class="fi fi-sr-mailbox-envelope"></i> Foodie@gmail.com</p>
-        </div>
+        <section class="footer-col" aria-labelledby="titulo-direccion">
+            <h3 id="titulo-direccion">Dirección</h3>
+            <address>
+                <p><i class="fi fi-sr-marker" aria-hidden="true"></i> Metrocentro, San Salvador</p>
+            </address>
+        </section>
 
-        <div class="footer-col">
-            <h4>Dirección</h4>
-
-            <p><i class="fi fi-sr-marker"></i> Metrocentro, San Salvador</p>
-        </div>
-
-        <p class="derechos">
-            © 2026 Foodie. Todos los derechos reservados.
-        </p>
-
+        <p class="derechos">© 2026 Foodie, todos los derechos reservados</p>
     </footer>
 
-    <script src="../js/estilos_foodie.js"></script>
-
+    <script src="../js/estilos.foodie.js"></script>
 </body>
 </html>

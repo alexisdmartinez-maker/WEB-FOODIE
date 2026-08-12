@@ -4,166 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOODIE - Menú de Hamburguesas</title>
-
-    <link rel="stylesheet" href="../CSS/diseño.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css">
+      <link rel="stylesheet" href="../CSS/diseño.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/diseño.css"
     
+
+     <link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poly:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+   
 </head>
-
 <body>
-
-    <!-- Encabezado -->
+    <!-- HEADER: logo + navegación + carrito -->
     <header class="navbar">
         <div class="logo">
-            <i class="fi fi-sr-spoon"></i> FOODIE <i class="fi fi-sr-fork"></i>
+            <i class="fi fi-sr-spoon" aria-hidden="true"></i> FOODIE <i class="fi fi-sr-fork" aria-hidden="true"></i>
         </div>
-
-        <nav class="nav-links">
-            <a href="../index.html">Inicio</a>
-            <a href="../index.html#categorias">Menú</a>
+        <nav class="nav-derecha" aria-label="Navegación principal">
+            <div class="nav-links">
+                <a href="../index.html">INICIO</a>
+                <a href="../index.html#categorias">MENÚ</a>
+            </div>
+            <a href="carrito.html" class="carrito-icon" aria-label="Ver carrito de compras">
+                <i class="fi fi-sr-shopping-cart" aria-hidden="true"></i>
+                <span class="carrito-contador" id="contador-carrito">0</span>
+            </a>
         </nav>
-
-        <a href="carrito.html" class="carrito-icon">
-            <i class="fi fi-sr-shopping-cart"></i>
-            <span class="carrito-contador" id="contador-carrito">0</span>
-        </a>
     </header>
 
-    <!-- Presentación -->
-    <section class="presentacion">
-        <div class="texto">
-            <h1>MENÚ DE HAMBURGUESAS</h1>
-            <p>
-                Descubre nuestra selección de hamburguesas gourmet clásicas y especiales,
-                preparadas con carne 100% de res y los mejores ingredientes.
-            </p>
-        </div>
-
-        <img src="../assets/img/hamburguesa-principal.jpg.jpg" alt="Hamburguesa Principal">
-    </section>
-
-    <!-- Productos -->
-    <section class="productos">
-
-        <div class="tarjeta-producto">
-            <img src="../assets/img/hamburguesa-de queso.jpg.jpg" alt="Hamburguesa de queso">
-            <p class="nombre-producto">Hamburguesa de queso</p>
-            <div class="precio-agregar">
-                <span class="precio">$6.00</span>
-                <button class="btn-agregar"
-                    data-producto="Hamburguesa de queso"
-                    data-precio="6.00">
-                    Agregar
-                </button>
+    <main class="fondo-menu">
+        <!-- PRESENTACIÓN DEL MENÚ -->
+        <section class="presentacion presentacion-hamburguesa" aria-label="Presentación del menú de hamburguesas">
+            <div class="texto">
+                <h1>MENÚ DE HAMBURGUESAS</h1>
+                <p>Descubre nuestra selección de hamburguesas gourmet clásicas y especiales, preparadas con carne 100% de res y los mejores ingredientes.</p>
             </div>
-        </div>
+            <img src="../assets/img/hamburguesa-principal.jpg.jpg" alt="Hamburguesa Principal">
+        </section>
 
-        <div class="tarjeta-producto">
-            <img src="../assets/img/hamburguesa-con cebolla.jpg.jpg" alt="Hamburguesa con cebolla">
-            <p class="nombre-producto">Hamburguesa con cebolla</p>
-            <div class="precio-agregar">
-                <span class="precio">$7.00</span>
-                <button class="btn-agregar"
-                    data-producto="Hamburguesa con cebolla"
-                    data-precio="7.00">
-                    Agregar
-                </button>
-            </div>
-        </div>
+        <!-- PRODUCTOS DE HAMBURGUESA -->
+        <section class="productos-menu" aria-labelledby="titulo-productos-hamburguesa">
+            <ul class="lista-productos">
 
-        <div class="tarjeta-producto">
-            <img src="../assets/img/hamburguesa-con chile.jpg.jpg" alt="Hamburguesa con chile">
-            <p class="nombre-producto">Hamburguesa con chile</p>
-            <div class="precio-agregar">
-                <span class="precio">$6.99</span>
-                <button class="btn-agregar"
-                    data-producto="Hamburguesa con chile"
-                    data-precio="6.99">
-                    Agregar
-                </button>
-            </div>
-        </div>
+                <li>
+                    <article class=" tarjeta-hamburguesa">
+                        <figure>
+                            <img src="../assets/img/hamburguesa-de queso.jpg.jpg" alt="Hamburguesa de queso">
+                            <figcaption class="nombre-producto">Hamburguesa de queso</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$6.00</span>
+                          <button class="btn-agregar" data-producto="Hamburguesa de queso" data-precio="6.00" data-imagen="../assets/img/hamburguesa-de queso.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
 
-        <div class="tarjeta-producto">
-            <img src="../assets/img/hamburguesa-americana.jpg.jpg" alt="Hamburguesa Americana">
-            <p class="nombre-producto">Hamburguesa Americana</p>
-            <div class="precio-agregar">
-                <span class="precio">$8.99</span>
-                <button class="btn-agregar"
-                    data-producto="Hamburguesa Americana"
-                    data-precio="8.99">
-                    Agregar
-                </button>
-            </div>
-        </div>
+                <li>
+                    <article class="tarjeta-hamburguesa">
+                        <figure>
+                            <img src="../assets/img/hamburguesa-con cebolla.jpg.jpg" alt="Hamburguesa con cebolla">
+                            <figcaption class="nombre-producto">Hamburguesa con cebolla</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$7.00</span>
+                           <button class="btn-agregar" data-producto="Hamburguesa con cebolla" data-precio="7.00" data-imagen="../assets/img/hamburguesa-con cebolla.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
 
-        <div class="tarjeta-producto">
-            <img src="../assets/img/hambuerguesa-bisonte.jpg.jpg" alt="Hamburguesa Bisonte">
-            <p class="nombre-producto">Hamburguesa Bisonte</p>
-            <div class="precio-agregar">
-                <span class="precio">$13.99</span>
-                <button class="btn-agregar"
-                    data-producto="Hamburguesa Bisonte"
-                    data-precio="13.99">
-                    Agregar
-                </button>
-            </div>
-        </div>
+                <li>
+                    <article class=" tarjeta-hamburguesa">
+                        <figure>
+                            <img src="../assets/img/hamburguesa-con chile.jpg.jpg" alt="Hamburguesa con chile">
+                            <figcaption class="nombre-producto">Hamburguesa con chile</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$6.99</span>
+                           <button class="btn-agregar" data-producto="Hamburguesa con chile" data-precio="6.99" data-imagen="../assets/img/hamburguesa-con chile.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
 
-        <div class="tarjeta-producto">
-            <img src="../assets/img/hamburguesa-doble.jpg.jpg" alt="Hamburguesa Doble">
-            <p class="nombre-producto">Hamburguesa Doble</p>
-            <div class="precio-agregar">
-                <span class="precio">$10.99</span>
-                <button class="btn-agregar"
-                    data-producto="Hamburguesa Doble"
-                    data-precio="10.99">
-                    Agregar
-                </button>
-            </div>
-        </div>
+                <li>
+                    <article class=" tarjeta-hamburguesa">
+                        <figure>
+                            <img src="../assets/img/hamburguesa-americana.jpg.jpg" alt="Hamburguesa Americana">
+                            <figcaption class="nombre-producto">Hamburguesa Americana</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$8.99</span>
+                          <button class="btn-agregar" data-producto="Hamburguesa Americana" data-precio="8.99" data-imagen="../assets/img/hamburguesa-americana.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
 
-    </section>
+                <li>
+                    <article class=" tarjeta-hamburguesa">
+                        <figure>
+                            <img src="../assets/img/hambuerguesa-bisonte.jpg.jpg" alt="Hamburguesa Bisonte">
+                            <figcaption class="nombre-producto">Hamburguesa Bisonte</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$13.99</span>
+                            <button class="btn-agregar" data-producto="Hamburguesa Bisonte" data-precio="13.99" data-imagen="../assets/img/hambuerguesa-bisonte.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
 
-    <!-- Pie de página -->
+                <li>
+                    <article class="tarjeta-hamburguesa">
+                        <figure>
+                            <img src="../assets/img/hamburguesa-doble.jpg.jpg" alt="Hamburguesa Doble">
+                            <figcaption class="nombre-producto">Hamburguesa Doble Queso</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$10.99</span>
+                          <button class="btn-agregar" data-producto="Hamburguesa Doble" data-precio="10.99" data-imagen="../assets/img/hamburguesa-doble.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
+
+            </ul>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
     <footer class="footer">
-
         <div class="footer-logo">
-            <i class="fi fi-sr-spoon"></i> FOODIE <i class="fi fi-sr-fork"></i>
+            <i class="fi fi-sr-spoon" aria-hidden="true"></i>FOODIE<i class="fi fi-sr-fork" aria-hidden="true"></i>
         </div>
 
-        <div class="footer-col">
-            <h4>Síguenos</h4>
+        <section class="footer-col" aria-labelledby="titulo-redes">
+            <h3 id="titulo-redes">Síguenos</h3>
             <div class="redes">
-                <a href="#"><i class="fi fi-brands-facebook"></i></a>
-                <a href="#"><i class="fi fi-brands-tik-tok"></i></a>
-                <a href="#"><i class="fi fi-brands-instagram"></i></a>
+             <a href="https://www.facebook.com/TU_PAGINA_AQUI" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Facebook">
+        <i class="fa-brands fa-facebook icono-facebook"></i>
+    </a>
+
+    <a href="https://www.tiktok.com/@TU_USUARIO_AQUI" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="TikTok">
+        <i class="fa-brands fa-tiktok"></i>
+    </a>
+
+    <a href="https://www.instagram.com/TU_USUARIO_AQUI" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Instagram" 
+       class="btn-instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
             </div>
-        </div>
+        </section>
 
-        <div class="footer-col">
-            <h4>Contáctanos</h4>
-            <p><i class="fi fi-sr-call-outgoing"></i> +503 7777 8888</p>
-            <p><i class="fi fi-sr-mailbox-envelope"></i> foodie@gmail.com</p>
-        </div>
+        <section class="footer-col" aria-labelledby="titulo-contacto">
+            <h3 id="titulo-contacto">Contáctanos</h3>
+            <address>
+                <p><i class="fi fi-sr-call-outgoing" aria-hidden="true"></i> <a href="tel:+50377778888">+503 7777-8888</a></p>
+                <p><i class="fi fi-sr-mailbox-envelope" aria-hidden="true"></i> <a href="mailto:Foodie@mejor.com">Foodie@mejor.com</a></p>
+            </address>
+        </section>
 
-        <div class="footer-col">
-            <h4>Dirección</h4>
-            <p><i class="fi fi-sr-marker"></i> Metrocentro, San Salvador</p>
-        </div>
+        <section class="footer-col" aria-labelledby="titulo-direccion">
+            <h3 id="titulo-direccion">Dirección</h3>
+            <address>
+                <p><i class="fi fi-sr-marker" aria-hidden="true"></i> Metrocentro, San Salvador</p>
+            </address>
+        </section>
 
-        <p class="derechos">© 2026 Foodie. Todos los derechos reservados.</p>
-
+        <p class="derechos">© 2026 Foodie, todos los derechos reservados</p>
     </footer>
 
-    <script src="../js/estilos_foodie.js"></script>
-
+    <script src="../js/estilos.foodie.js"></script>
 </body>
 </html>

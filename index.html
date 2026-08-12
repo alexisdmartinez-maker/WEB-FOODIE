@@ -1,140 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOODIE</title>
     <link rel="stylesheet" href="CSS/diseño.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
     <!---link to Google Fonts--->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <!--letra poly-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poly:ital@0;1&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <!--logos y links carrito de suma para javacrip-->
+    <!-- HEADER: logo + navegación + carrito -->
     <header class="navbar">
-    <div class="logo">
-    <i class="fi fi-sr-spoon"></i>FOODIE<i class="fi fi-sr-fork"></i>
-    </div>
-    <nav class="nav-links">
-    <a href="index.html">Inicio</a>
-    <a href="#categorias">Menu</a>
-    </nav>
-    <a href="html/carrito.html" class="carrito-icon">
-    <i class="fi fi-sr-shopping-cart"></i>
-    <span class="carrito-contador" id="contador-carrito">0</span>
-</a>
+        <div class="logo">
+            <i class="fi fi-sr-spoon" aria-hidden="true"></i> FOODIE <i class="fi fi-sr-fork" aria-hidden="true"></i>
+        </div>
+        <nav class="nav-derecha" aria-label="Navegación principal">
+            <div class="nav-links">
+                <a href="index.html">INICIO</a>
+                <a href="index.html#categorias">MENÚ</a>
+            </div><a href="html/carrito.html" class="carrito-icon" aria-label="Ver carrito de compras">
+            
+                <i class="fi fi-sr-shopping-cart" aria-hidden="true"></i>
+                <span class="carrito-contador" id="contador-carrito">0</span>
+            </a>
+        </nav>
     </header>
-    <section class="hero">
-    <div class="hero-texto">
-    <h1>La mejor comida <br> en un solo lugar</h1>
-    <p>Ordena fácil y rápido desde de casa</p>
-    <a href="#categorias" class="btn-ver-menu">Ver menú</a>   
-</div>
-<div class="hero-imagen">
-    <img src="assets/img/sushi-plato.jpg.jpg"alt="Plato de sushi variado">
-</div>
-    
- </section>
- <section class="categorias" id="categorias">
-    <a href="html/pizza.html" class="categoria-card">
-        <img src="assets/icon/icono-pizza.png.png" alt="Pizza">
-        <p>PIZZA</p>
-    </a>
-    <a href="html/hamburguesa.html" class="categoria-card">
-        <img src="assets/icon/icono-hamburguesa.png.png" alt="Hamburguesa">
-        <p>HAMBURGUESA</p>
-    </a>
 
-    <a href="html/sushi.html" class="categoria-card">
-        <img src="assets/icon/icono-sushi.png.png" alt="Sushi">
-        <p>SUSHI</p>
-    </a>
+    <main class="contenedoras">
 
-    <a href="html/vino.html" class="categoria-card">
-        <img src="assets/icon/icono-bebidas.png.png" alt="Bebidas">
-        <p>BEBIDAS</p>
-    </a>
-</section>
-<!--CARRUSEL DE JAVACRIP-->
- <section class="productos-destacados">
-    <h2>Productos <span class="subrayado">destacados</span></h2>
-
-    <div class="carrusel-productos" id="carrusel">
-
-        <div class="tarjeta-producto">
-            <img src="assets/img/sushi-mix.jpg.jpg" alt="Sushi Mix">
-            <p class="nombre-producto">Sushi Mix</p>
-            <div class="precio-agregar">
-                <span class="precio">$12.00</span>
-                <button class="btn-agregar" data-producto="Sushi Mix" data-precio="12.00">Agregar</button>
+    <!-- LETRA DE INICIO DE LA PAG WEB-->
+        <section class="hero" aria-label="Presentación">
+            <div class="hero-texto">
+                <h1>La mejor comida <br> en un solo lugar</h1>
+                <p>Ordena fácil y rápido desde de casa</p>
+                <a href="#categorias" class="btn-ver-menu">Ver menú</a>
             </div>
+            <div class="hero-imagen">
+                <img src="assets/img/sushi-plato.jpg.jpg" alt="Plato de sushi variado">
+            </div>
+        </section>
+
+        <!-- CATEGORÍAS -->
+        <section class="categorias" id="categorias">
+    <ul class="lista-categorias">
+        <li>
+            <a href="html/pizza.html" class="categoria-card card-pizza">
+                <img src="assets/icon/icono-pizza.png.png" alt="Pizza">
+                <p>PIZZA</p>
+            </a>
+        </li>
+        
+        <li>
+            <a href="html/hamburguesa.html" class="categoria-card card-hamburguesa">
+                <img src="assets/icon/icono-hamburguesa.png.png" alt="Hamburguesa">
+                <p>HAMBURGUESA</p>
+            </a>
+        </li>
+        
+        <li>
+            <a href="html/sushi.html" class="categoria-card card-sushi">
+                <img src="assets/icon/icono-sushi.png.png" alt="Sushi">
+                <p>SUSHI</p>
+            </a>
+        </li>
+        
+        <li>
+            <a href="html/vino.html" class="categoria-card card-bebidas">
+                <img src="assets/icon/icono-bebidas.png.png" alt="Bebidas">
+                <p>BEBIDAS</p>
+            </a>
+        </li>
+    
+
+    </ul>
+</section>
+
+        <!-- CARRUSEL (carrusel manejado por JS) -->
+        <section class="productos-destacados" aria-labelledby="titulo-destacados">
+            <h2 id="titulo-destacados"><span class="subrayado">Productos</span> destacados</h2>
+             
+            <div class="carrusel-productos">
+            <ul class="carrusel-pista" id="carrusel">
+
+                <li>
+                    <article class="tarjeta-producto">
+                        <figure>
+                            <img src="assets/img/sushi-mix.jpg.jpg" alt="Sushi Mix">
+                            <figcaption class="nombre-producto">Sushi Mix</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$12.00</span>
+                          <button class="btn-agregar" data-producto="Sushi Mix" data-precio="12.00" data-imagen="../assets/img/sushi-mix.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjeta-producto">
+                        <figure>
+                            <img src="assets/img/hamburguesa-doble.jpg.jpg" alt="Hamburguesa Doble">
+                            <figcaption class="nombre-producto">Hamburguesa Doble</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$10.00</span>
+                         <button class="btn-agregar" data-producto="Hamburguesa Doble" data-precio="10.00" data-imagen="../assets/img/hamburguesa-doble.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjeta-producto">
+                        <figure>
+                            <img src="assets/img/pizza-pepperoni.jpg.jpg" alt="Pizza Pepperoni">
+                            <figcaption class="nombre-producto">Pizza Pepperoni</figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$8.00</span>
+                            <button class="btn-agregar" data-producto="Pizza Pepperoni" data-precio="8.00" data-imagen="../assets/img/pizza-pepperoni.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjeta-producto">
+                        <figure>
+                            <img src="assets/img/vino-chardonnay.jpg.jpg" alt="Vino blanco de chardonnay">
+                            <figcaption class="nombre-producto">Vino blanco </figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$23.00</span>
+                            <button class="btn-agregar" data-producto="Vino Chardonnay" data-precio="23.00" data-imagen="../assets/img/vino-chardonnay.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjeta-producto">
+                        <figure>
+                            <img src="assets/img/sandia-fresca.jpg.jpg" alt="Jugo de sandía fresca">
+                            <figcaption class="nombre-producto">Jugosa sandía </figcaption>
+                        </figure>
+                        <div class="precio-agregar">
+                            <span class="precio">$5.00</span>
+                            <button class="btn-agregar" data-producto="Jugo Sandía" data-precio="5.00" data-imagen="../assets/img/sandia-fresca.jpg.jpg">Agregar</button>
+                        </div>
+                    </article>
+                </li>
+              
+            </ul>
+            </div>
+        </section>
+    </main> 
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <i class="fi fi-sr-spoon" aria-hidden="true"></i>FOODIE<i class="fi fi-sr-fork" aria-hidden="true"></i>
         </div>
 
-        <div class="tarjeta-producto">
-    <img src="assets/img/hamburguesa-doble.jpg.jpg" alt="Hamburguesa Doble">
-    <p class="nombre-producto">Hamburguesa Doble</p>
-    <div class="precio-agregar">
-        <span class="precio">$10.00</span>
-        <button class="btn-agregar" data-producto="Hamburguesa Doble" data-precio="10.00">Agregar</button>
-    </div>
-</div>
- <div class="tarjeta-producto">
-    <img src="assets/img/pizza-pepperoni.jpg.jpg" alt="Pizza Pepperoni">
-    <p class="nombre-producto">Pizza Pepperoni</p>
-    <div class="precio-agregar">
-        <span class="precio">$8.00</span>
-        <button class="btn-agregar" data-producto="Pizza Pepperoni" data-precio="8.00">Agregar</button>
-    </div>
-</div>
-<div class="tarjeta-producto">
-    <img src="assets/img/vino-chardonnay.jpg.jpg" alt="Vino blanco de chardonnay">
-    <p class="nombre-producto">Vino blanco de chardonnay</p>
-    <div class="precio-agregar">
-        <span class="precio">$23.00</span>
-        <button class="btn-agregar" data-producto="Vino Chardonnay" data-precio="23.00">Agregar</button>
-    </div>
-</div>
-<div class="tarjeta-producto">
-    <img src="assets/img/sandia-fresca.jpg.jpg" alt="Jugo de sandía fresca">
-    <p class="nombre-producto">Jugosa sandía fruta fresca</p>
-    <div class="precio-agregar">
-        <span class="precio">$5.00</span>
-        <button class="btn-agregar" data-producto="Jugo Sandía" data-precio="5.00">Agregar</button>
-    </div>
-</div>
+        <section class="footer-col" aria-labelledby="titulo-redes">
+            <h3 id="titulo-redes">Síguenos</h3>
+          <div class="redes">
+<a href="https://www.facebook.com/TU_PAGINA_AQUI" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Facebook">
+        <i class="fa-brands fa-facebook icono-facebook"></i>
+    </a>
 
-    </div>
-</section>
+    <a href="https://www.tiktok.com/@TU_USUARIO_AQUI" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="TikTok">
+        <i class="fa-brands fa-tiktok"></i>
+    </a>
 
-  <footer class="footer">
-<div class="footer-logo">
-   <i class="fi fi-sr-spoon"></i>FOODIE<i class="fi fi-sr-fork"></i>
+    <a href="https://www.instagram.com/TU_USUARIO_AQUI" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Instagram" 
+       class="btn-instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
 </div>
-<div class="footer-col">
-    <h4>Síguenos</h4>
-    <div class="redes">
-        <a href="#"><i class="fi fi-brands-facebook"></i></a>
-        <a href="#"><i class="fi fi-brands-tik-tok"></i></a>
-        <a href="#"><i class="fi fi-brands-instagram"></i></a>
-    </div>
-</div>
+        </section>
 
- <div class="footer-col">
-    <h4>Contáctanos</h4>
-    <p><i class="fi fi-sr-call-outgoing"></i>+503 7777-8888</p>
-    <p><i class="fi fi-sr-mailbox-envelope"></i>Foodie@mejor.com</p>
+        <section class="footer-col" aria-labelledby="titulo-contacto">
+            <h3 id="titulo-contacto">Contáctanos</h3>
+            <address>
+                <p><i class="fi fi-sr-call-outgoing" aria-hidden="true"></i> <a href="tel:+50377778888">+503 7777-8888</a></p>
+                <p><i class="fi fi-sr-mailbox-envelope" aria-hidden="true"></i> <a href="mailto:Foodie@mejor.com">Foodie@mejor.com</a></p>
+            </address>
+        </section>
 
- </div>
- <div class="footer-col">
-    <h4>Dirección</h4>
-    <p><i class="fi fi-sr-marker"></i>Metrocentro,San Salvador</p>
- </div>
-  <p class="derechos">© 2026 Foodie, todos los derechos reservados</p>
-  </footer>  
-  <script src="../js/estilos _foodie.js"></script>
-    
+        <section class="footer-col" aria-labelledby="titulo-direccion">
+            <h3 id="titulo-direccion">Dirección</h3>
+            <address>
+                <p><i class="fi fi-sr-marker" aria-hidden="true"></i> Metrocentro, San Salvador</p>
+            </address>
+        </section>
+
+        <p class="derechos">© 2026 Foodie, todos los derechos reservados</p>
+    </footer>
+
+    <script src="js/estilos.foodie.js"></script>
 </body>
-</html> 
+</html>
