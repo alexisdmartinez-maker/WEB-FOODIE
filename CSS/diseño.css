@@ -1,0 +1,229 @@
+/* Fuente */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poetsen One", sans-serif;
+}
+
+body{
+    background: #f8f8f8;
+    color: #333;
+}
+
+/* Barra de navegación */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d62828;
+    color: white;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links{
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.nav-links a:hover{
+    color: #ffd166;
+}
+
+.carrito-icon{
+    position: relative;
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.carrito-contador{
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: yellow;
+    color: black;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+/* Presentación */
+.presentacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 8%;
+    background: white;
+}
+
+.presentacion .texto{
+    width: 50%;
+}
+
+.presentacion h1{
+    font-size: 45px;
+    color: #d62828;
+    margin-bottom: 20px;
+}
+
+.presentacion p{
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.presentacion img{
+    width: 420px;
+    border-radius: 20px;
+}
+
+/* Productos */
+.productos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+    padding: 60px 8%;
+}
+
+.tarjeta-producto{
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    overflow: hidden;
+    transition: .3s;
+}
+
+.tarjeta-producto:hover{
+    transform: translateY(-8px);
+}
+
+.tarjeta-producto img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.nombre-producto{
+    text-align: center;
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.precio-agregar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.precio{
+    color: #d62828;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.btn-agregar{
+    background: #d62828;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-agregar:hover{
+    background: #a4161a;
+}
+
+/* Footer */
+.footer{
+    background: #1f1f1f;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 8%;
+}
+
+.footer-logo{
+    font-size: 28px;
+}
+
+.footer-col h4{
+    margin-bottom: 15px;
+}
+
+.footer-col p{
+    margin: 8px 0;
+}
+
+.redes{
+    display: flex;
+    gap: 15px;
+}
+
+.redes a{
+    color: white;
+    font-size: 28px;
+    transition: .3s;
+}
+
+.redes a:hover{
+    color: #ffd166;
+}
+
+.derechos{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid gray;
+    padding-top: 20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .presentacion{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .presentacion .texto{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .presentacion img{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .precio-agregar{
+        flex-direction: column;
+        gap: 15px;
+    }
+}
