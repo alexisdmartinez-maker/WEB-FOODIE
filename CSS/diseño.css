@@ -835,7 +835,7 @@ main.fondo-menu {
     margin-bottom: 6px;
     margin-top: 12px;
 }
-.direccion-entrega input
+.direccion-entrega input,
 .direccion-entrega textarea{
     width: 100px;
     padding: 10px 14px;
@@ -919,7 +919,177 @@ main.fondo-menu {
 .carrusel-pista .precio-agregar{
     margin-top: auto;
 
-}/*kknkjj*/
+}
+/* ==========================================
+   VENTANA MODAL DE PAGO (CORREGIDA)
+   ========================================== */
+
+/* Asegura que todos los elementos dentro de la modal calculen bien su tamaño */
+.tarjeta-pago * {
+    box-sizing: border-box;
+}
+
+/* Fondo oscuro que cubre toda la pantalla */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+}
+
+/* Tarjeta central blanca */
+.tarjeta-pago {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 380px;
+    padding: 30px 25px;
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: animarEntrada 0.3s ease-out;
+}
+
+@keyframes animarEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Encabezado */
+.pago-header {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.pago-brand {
+    font-family: 'Poly', serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.pago-header h2 {
+    font-family: 'Poetsen One', sans-serif, system-ui;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Campos de Formulario */
+.campo-pago {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+    width: 100%;
+}
+
+.campo-pago label {
+    font-family: 'Poly', serif;
+    font-size: 0.95rem;
+    color: #111;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* Cajas de texto (con width: 100% para evitar el desborde) */
+.campo-pago input {
+    width: 100%; /* <- Esto arregla el desborde del CVV */
+    background-color: #fce5cd;
+    border: none;
+    border-radius: 14px;
+    height: 44px;
+    padding: 0 14px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.campo-pago input:focus {
+    box-shadow: 0 0 0 2px #e63946;
+    background-color: #f7d8b5;
+}
+
+/* Fila doble para Expiración y CVV */
+.fila-doble {
+    display: flex;
+    gap: 14px;
+    width: 100%;
+}
+
+.fila-doble .campo-pago {
+    flex: 1;
+    min-width: 0; /* <- Permite que los flex-items se encojan correctamente */
+}
+
+/* Botón de Confirmar Pedido */
+.btn-pagar {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #e63946;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Poetsen One', sans-serif, system-ui;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-pagar:hover {
+    background-color: #c12a36;
+}
+
+.btn-pagar:active {
+    transform: scale(0.98);
+}
+/* ==========================================
+   BARRITA DE NOTIFICACIÓN FLOTANTE
+   ========================================== */
+.notificacion-bar {
+    position: fixed;
+    top: -80px; /* Oculta arriba de la pantalla */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e63946; /* Rojo elegante Foodie */
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-family: 'Poly', serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    transition: top 0.4s ease-in-out;
+    pointer-events: none;
+}
+
+/* Estado cuando la barrita baja a la pantalla */
+.notificacion-bar.activa {
+    top: 25px;
+}
 
 
 /*ajuste para el celular*/
@@ -1588,6 +1758,42 @@ main.fondo-menu {
     .item-nombre{
         font-size: 15px;
     }
+    /* ==========================================
+   CORRECCIÓN PARA QUE LA NOTIFICACIÓN SÍ DESAPAREZCA
+   ========================================== */
+
+/* 1. ESTADO OCULTO (Se esconde arriba fuera de la vista) */
+.notificacion-bar,
+.notificacion {
+    position: fixed !important;
+    top: -120px !important; /* Oculta arriba */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 90% !important;
+    max-width: 360px !important;
+    z-index: 99999 !important;
+    transition: top 0.4s ease-in-out !important;
+    pointer-events: none;
+}
+
+/* 2. ESTADO VISIBLE (Baja cuando tu JS le activa la clase) */
+.notificacion-bar.activa,
+.notificacion.activa,
+.notificacion-bar.show,
+.notificacion.show {
+    top: 20px !important; /* Se muestra momentáneamente en pantalla */
+}
+
+/* 3. MANTENER FIX DE AUTOCOMPLETADO (COLOR BEIGE DE CHROME) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #fce5cd inset !important;
+    -webkit-text-fill-color: #111111 !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+    
 
 }
                     
